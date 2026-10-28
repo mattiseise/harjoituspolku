@@ -56,3 +56,12 @@ Ei kirjautumista, nimiä, seurantaa, analytiikkaa tai evästeitä. Vastaukset ov
 Semanttinen HTML, näkyvä näppäimistökohdistus, ohituslinkki, nimilaput ja fieldset/legend-kysymykset. Palaute sisältää tekstin ja selityksen värin lisäksi. Vapaaehtoinen animaatio huomioi `prefers-reduced-motion`-asetuksen. Ei välkettä tai ääniä. Tämä ei ole riippumaton WCAG-vaatimustenmukaisuusauditointi.
 
 Älä lisää julkiseen repositorioon lasten tietoja, vastaustiedostoja, tunnuksia, oppikirjan sivukuvia tai luvattomia kuvia. Harjoitus on oppimisen apuväline, ei valvottu koe: vastausavain on julkisessa selainkoodissa.
+
+
+## Photocard-palkinnot
+
+K-pop-kokeissa on 10 photocard-palkintoa: TUIDE, ILLIT, TWICE, BLACKPINK ja aespa, yksi jäsenkortti ja yksi ryhmäkortti kustakin. Jäsenkortit: Elena, Wonhee, Sana, Jennie ja Winter. Valokuvat ovat Creative Commons -lisensoituja. Kortit eivät ole virallisia fanituotteita. Lähteet, kuvaajat ja lisenssit ovat `sisalto/5/suomen-kieli/kpop/kuvalahteet.json`-tiedostossa, käyttöliittymässä ja ladattavien SVG-korttien sisällä. Korttiasettelu ja valokuvan pienennys on ilmoitettu muutoksena. BLACKPINK-ryhmäkortti ja sen kuva ovat CC BY-SA 4.0 -lisensoituja; muut kortit on lisensoitu valokuvansa CC BY -version mukaisesti. Kuvat on upotettu pakettiin, eikä lapsen selain ota yhteyttä kuvapalveluihin.
+
+Yksi kokonaan vastattu ja tarkistettu harjoituskerta antaa valita yhden uuden kortin. Täysiä pisteitä ei vaadita. Korjauskierros säilyttää kortin; lisäkortti vaatii uuden harjoituskerran. Kokoelmaan ei tule kaksoiskappaleita. Kymmenen kortin sarjan täytyttyä kokoelmaa voi katsella ja ladata edelleen. ”Tyhjennä tämä koe” säilyttää kokoelman mutta aloittaa uuden harjoituskerran. ”Tyhjennä K-pop-tiedot” tyhjentää myös kokoelman. Aiemmat kuvituskortit ovat edelleen Palkinnot-näkymän lisätiedoissa. Aiemmin tallennetut vastaukset ja tulokset säilyvät; uusi `cards`-lista lisätään samaan version 3 tallennusmuotoon.
+
+Kortit ladataan SVG-kuvina (550 × 850): ne avautuvat selaimessa ja ne voi tulostaa. Lähde- ja lisenssitiedot kulkevat mukana. Sivun HTML-lataus sisältää myös kaikki kuvat ja toimii ilman verkkoyhteyttä.
