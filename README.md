@@ -6,7 +6,7 @@ Lapsille itsenäisiä harjoituskokeita. Sivusto: https://mattiseise.github.io/ha
 
 - Julkaistu: 5. luokan suomen kielen **Kielen taitaja**, 44 tehtävää.
 - Lähtöaineisto: keskustelun ”Harjoituskokeen tekeminen” alkuperäinen `harjoituskoe_suomi_5lk.html`. Korjattu kirjoitusvastausten selitysvirhe, hyväksytty oikeat persoonapronominit ja täsmennetty paikallissijojen kysymykset.
-- **Odottaa siirtoa:** myöhempi `kpop_suomen_harjoituskokeet.html` / `kpop_harjoituskokeet_paketti.zip`. Alkuperäisen kolmen kokeen 108 tehtävää tai kuvia ei saatu mukaan keskusteluviitteestä. Tätä julkaisua ei esitetä niiden kopiona. Älä lisää niitä valikkoon ennen kuin tiedosto on saatu ja tarkistettu.
+- Julkaistu myös alkuperäinen **Kieli & rytmi** -paketti: Neonlava, Pastellistudio ja Tähtikonsertti, 36 tehtävää kussakin, yhteensä 108. Kaikki alkuperäiset kuvitukset ja kuvapalkinnot ovat mukana. Jokaisella kokeella on oma suora linkki etusivulla.
 - Sivujen oppikirjakuvia ei julkaista. Palkintokuvitus on tämän sivuston oma SVG.
 
 ## Rakenne
@@ -34,7 +34,9 @@ Suora jaettava valikko: `?luokka=5&aine=Suomen+kieli#kokeet`. Muut luokat toimiv
 
 ### Alkuperäisen K-pop-paketin tuonti
 
-Kun tiedosto saadaan, sijoita se esimerkiksi `sisalto/5/suomen-kieli/kpop/index.html`-polkuun. Tarkista ensin ulkoiset verkkopyynnöt, henkilötiedot, mahdollinen selaintallennus sekä kaikki kolme tarkistusta ja palkintoa. Lisää paluulinkki `../../../../index.html?luokka=5&aine=Suomen+kieli#kokeet`. Lisää sitten kirjastoon yksi pakettikortti tai kolme erillistä korttia, jos alkuperäinen sivu tukee suoria koekohtaisia linkkejä. Älä keksi toimimattomia ankkureita. Säilytä paketin oma sisältö ja kuvat, kunnes niiden käyttöoikeudet ja oikeellisuus on tarkistettu.
+Paketti on polussa `sisalto/5/suomen-kieli/kpop/index.html`. Koekohtaiset linkit: `?koe=neon`, `?koe=pastel`, `?koe=galaxy`. Alkuperäinen sisältö ja kuvat säilytettiin samassa HTML-tiedostossa. Lisätty paluulinkki, koekohtainen aloitus sekä valinnainen laitteelle muistaminen ja kaikkien K-pop-tietojen tyhjennys. Sivun CSP estää verkkoyhteydet ja suorittaa vain oman skriptin SHA-256-tiivisteellä; päivitä tiiviste aina skriptiä muuttaessasi.
+
+K-pop-kokeissa vastaukset ja palkinnot säilyvät oletuksena vain avoimella sivulla. ”Muista tällä laitteella” tallentaa ne haluttaessa tämän selaimen `localStorage`-muistiin avaimella `kieli-rytmi-5lk-v3`. Asetuksen poistaminen poistaa pysyvän kopion, mutta avoimen sivun vastaukset säilyvät. ”Tyhjennä K-pop-tiedot” poistaa myös sivun nykyiset tulokset ja palkinnot. Toiminto ei koske muita sivustoja tai laitteita.
 
 ## Pages-asetukset
 
@@ -49,7 +51,7 @@ Tämä on staattinen sivusto: ei asennusta, palvelinta, ulkoisia kirjastoja, mak
 
 ## Lasten yksityisyys ja saavutettavuus
 
-Ei kirjautumista, nimiä, seurantaa, analytiikkaa, evästeitä tai pysyvää selaintallennusta. Vastaukset ovat sivun muistissa ja tyhjenevät uudelleenlatauksessa. Lapsi voi itse ladata tulokset paikallisesti; mitään ei lähetetä ylläpitäjälle. GitHub käsittelee sivulatausten teknisiä tietoja omien käytäntöjensä mukaisesti.
+Ei kirjautumista, nimiä, seurantaa, analytiikkaa tai evästeitä. Vastaukset ovat oletuksena sivun muistissa ja tyhjenevät uudelleenlatauksessa. K-pop-paketissa pysyvän selaintallennuksen voi ottaa erikseen käyttöön yllä kuvatulla asetuksella. Lapsi voi itse ladata tulokset paikallisesti; mitään ei lähetetä ylläpitäjälle. GitHub käsittelee sivulatausten teknisiä tietoja omien käytäntöjensä mukaisesti.
 
 Semanttinen HTML, näkyvä näppäimistökohdistus, ohituslinkki, nimilaput ja fieldset/legend-kysymykset. Palaute sisältää tekstin ja selityksen värin lisäksi. Vapaaehtoinen animaatio huomioi `prefers-reduced-motion`-asetuksen. Ei välkettä tai ääniä. Tämä ei ole riippumaton WCAG-vaatimustenmukaisuusauditointi.
 
