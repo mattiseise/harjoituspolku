@@ -1,0 +1,1 @@
+(function(root){'use strict';const normalize=s=>String(s).normalize('NFC').toLocaleLowerCase('fi').trim().replace(/[.!?\s]+$/,'').trim().replace(/\s+/g,' ');const check=(q,a)=>normalize(a)!==''&&q.answers.some(x=>normalize(x)===normalize(a));root.Grading={normalize,check};if(typeof module!=='undefined')module.exports=root.Grading;})(typeof window!=='undefined'?window:globalThis);

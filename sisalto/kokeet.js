@@ -1,0 +1,1 @@
+window.EXAMS = [{id:'suomi-5-perusteet',grade:5,subject:'Suomen kieli',title:'Kielen taitaja',description:'Sanaluokat, sijamuodot, aikamuodot ja kielteiset muodot.',count:44,minutes:'30–45',href:'sisalto/5/suomen-kieli/perusteet.html',tags:['Sanaluokat','Sijamuodot','Verbit']}];
