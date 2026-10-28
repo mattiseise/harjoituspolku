@@ -58,10 +58,23 @@ Semanttinen HTML, näkyvä näppäimistökohdistus, ohituslinkki, nimilaput ja f
 Älä lisää julkiseen repositorioon lasten tietoja, vastaustiedostoja, tunnuksia, oppikirjan sivukuvia tai luvattomia kuvia. Harjoitus on oppimisen apuväline, ei valvottu koe: vastausavain on julkisessa selainkoodissa.
 
 
-## Photocard-palkinnot
+## Photocard-palkinnot ja buusterit
 
-K-pop-kokeissa on 10 photocard-palkintoa: TUIDE, ILLIT, TWICE, BLACKPINK ja aespa, yksi jäsenkortti ja yksi ryhmäkortti kustakin. Jäsenkortit: Elena, Wonhee, Sana, Jennie ja Winter. Valokuvat ovat Creative Commons -lisensoituja. Kortit eivät ole virallisia fanituotteita. Lähteet, kuvaajat ja lisenssit ovat `sisalto/5/suomen-kieli/kpop/kuvalahteet.json`-tiedostossa, käyttöliittymässä ja ladattavien SVG-korttien sisällä. Korttiasettelu ja valokuvan pienennys on ilmoitettu muutoksena. BLACKPINK-ryhmäkortti ja sen kuva ovat CC BY-SA 4.0 -lisensoituja; muut kortit on lisensoitu valokuvansa CC BY -version mukaisesti. Kuvat on upotettu pakettiin, eikä lapsen selain ota yhteyttä kuvapalveluihin.
+Kokoelmassa on 50 korttia: 10 TUIDE-, 10 ILLIT-, 10 TWICE-, 10 BLACKPINK- ja 10 aespa-korttia. Palkinnot-näkymä on jaettu bändeittäin, ja jokaisessa näkyy oma keräilylaskuri. Suora linkki: `sisalto/5/suomen-kieli/kpop/index.html?palkinnot=1&band=ILLIT` (band-arvoksi myös TUIDE, TWICE, BLACKPINK tai aespa).
 
-Yksi kokonaan vastattu ja tarkistettu harjoituskerta antaa valita yhden uuden kortin. Täysiä pisteitä ei vaadita. Korjauskierros säilyttää kortin; lisäkortti vaatii uuden harjoituskerran. Kokoelmaan ei tule kaksoiskappaleita. Kymmenen kortin sarjan täytyttyä kokoelmaa voi katsella ja ladata edelleen. ”Tyhjennä tämä koe” säilyttää kokoelman mutta aloittaa uuden harjoituskerran. ”Tyhjennä K-pop-tiedot” tyhjentää myös kokoelman. Aiemmat kuvituskortit ovat edelleen Palkinnot-näkymän lisätiedoissa. Aiemmin tallennetut vastaukset ja tulokset säilyvät; uusi `cards`-lista lisätään samaan version 3 tallennusmuotoon.
+Jokaisessa kortissa on oikea lisensoitu artistikuva ja lyhyt suomenkielinen knoppitieto. Kuvan lähde, kuvaaja, lisenssi sekä knoppitiedon lähde ovat käyttöliittymässä, SVG-latauksessa ja `kuvalahteet.json`-tiedostossa. TUIDEn live-kortit on poimittu SBS Radion Creative Commons -lisensoidusta SUN KISS -esiintymisestä. Näiden ruutujen jäseniä ei nimetä ilman lähteen omaa nimitietoa. Muut kuvat ovat Commons-lähteistä. Kuvat on pienennetty ja pakattu WebP-muotoon; kasvoja ei ole muokattu generatiivisesti. Kortit eivät ole virallisia fanituotteita. Kunkin johdannaiskortin lisenssi seuraa sen valokuvan CC BY- tai CC BY-SA-versiota.
 
-Kortit ladataan SVG-kuvina (550 × 850): ne avautuvat selaimessa ja ne voi tulostaa. Lähde- ja lisenssitiedot kulkevat mukana. Sivun HTML-lataus sisältää myös kaikki kuvat ja toimii ilman verkkoyhteyttä.
+### Palkinnon toiminta
+
+1. Kokonaan vastattu ja tarkistettu harjoituskerta luo yhden buusterin, vaikka vastauksissa olisi virheitä.
+2. Buusteriin arvotaan viisi eri korttitunnusta vain vielä keräämättömistä korteista. Jos jäljellä on alle viisi, mukana ovat kaikki jäljellä olevat.
+3. Buusteri tallennetaan harjoituskerran tilaan ennen avaamista. Palaaminen, korjauskierros ja laitteelle muistamisen kanssa uudelleenlataus eivät arvo pakkausta uudelleen.
+4. Avausanimaation jälkeen näkyvistä korteista voi valita yhden. Valittu kortti lisätään kokoelmaan; saman suorituksen muut kortit eivät ole lunastettavissa.
+5. Uusi harjoituskerta (Tyhjennä tämä koe) mahdollistaa uuden buusterin. Kokoelma säilyy. Tyhjennä K-pop-tiedot poistaa myös kokoelman ja keskeneräiset buusterit.
+6. Kun kaikki 50 korttia on kerätty, näytetään valmis kokoelma eikä tyhjää pakkausta.
+
+Animaation voi ohittaa painikkeella tai poistaa käytöstä. Laitteen vähennetyn liikkeen asetus huomioidaan. Aiemmat 10 korttitunnusta ja version 3 vastaukset/tulokset säilyvät; tilaan lisätään harjoituskohtainen `booster: {ids, opened}`. Aiemmat kuvituskortit ovat Palkinnot-näkymän lisätiedoissa. Kortit ja kokoelma ovat oletuksena vain sivun muistissa; Muista tällä laitteella tallentaa myös avatun/pending buusterin paikallisesti. Lasten tietoja ei lähetetä palvelimelle.
+
+Kortit ladataan SVG-kuvina (550 × 850), ja ne voi avata selaimessa tai tulostaa. Kuvan ja knoppitiedon lähteet kulkevat mukana. HTML-lataus sisältää kaikki kuvat ja toimii ilman verkkoyhteyttä.
+
+Tarkistukset: `node tools/check.cjs` ja `node tools/check-photocards.cjs`. Jälkimmäinen tarkistaa myös buusterin pysyvyyden, kaksoislunastusten eston, loppukokoelman 0–4 vaihtoehdon tilanteet ja aiempien tallennusten siirtymisen.
