@@ -86,3 +86,9 @@ Tarkistukset: `node tools/check.cjs` ja `node tools/check-photocards.cjs`. Jälk
 Yhteinen assets/review.js arvioi tämän tarkistuksen vastaukset tehtävien skill-tunnisteilla; ilman tunnistetta käytetään osiota. skills-olion title ja reviewTip määrittävät taitokohtaisen kertauksen. Osioissa voi määrittää reviewTip-varavinkin. Lisää jokaiseen tehtävään id, section, skill, prompt, answers, explanation ja tarvittaessa options. Älä päättele lapsen yleistä osaamista yhdestä kokeesta. Puuttuvat vastaukset raportoidaan erikseen, eivät osaamisvirheinä. Kertausjärjestys määräytyy vastattujen tehtävien virheosuuden ja virhemäärän perusteella. Täydet pisteet antavat ylläpitovinkin. K-pop-paketissa sama moottori on upotettu offline-käyttöä varten. Kun muokkaat sitä, päivitä upotettu kopio ja CSP-tiiviste.
 
 Espanjan aksentteja tai ñ-kirjainta ei poisteta normalisoinnissa. Lisää vain kieliopillisesti hyväksytyt vastausvaihtoehdot. Sisältöpohja ei vielä sisällä kuuntelutehtäviä eikä vapaiden kirjoitelmien arviointia. Analyysi on sääntöpohjainen ja toimii kokonaan selaimessa.
+
+## Kaikkien oppiaineiden yhteiset palkinnot
+
+assets/rewards.js ylläpitää yhtä korttikokoelmaa. Standardimoottorin jokainen kokonainen tarkistus avaa saman yritystunnisteen buusterin palkintosivulla; korjaustarkistus ei tuota lisäbuusteria. Alusta aloittaminen luo uuden yrityksen. Espanjan pohja käyttää tätä ratkaisua, kun tehtävät avataan standardin quiz.js-moottorilla. Luonnos ei avaa palkintoa. K-pop-paketti sisältää samasta moduulista upotetun kopion ja siirtää vanhat kortit automaattisesti yhteiseen kokoelmaan.
+
+Oletuksena sessionStorage säilyttää kokoelman saman välilehden sivusiirtymissä ja uudelleenlatauksissa. Muista tällä laitteella siirtää sen localStorageen tässä selaimessa. Eri laitteilla tai selaimilla ei ole synkronointia. Yhteiset palkinnot vaativat selaintallennuksen; estetty tallennus näytetään palautteessa. Tavallisen kokeen vastaukset ovat edelleen sivun muistissa.
