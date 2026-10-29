@@ -78,3 +78,11 @@ Animaation voi ohittaa painikkeella tai poistaa käytöstä. Laitteen vähennety
 Kortit ladataan SVG-kuvina (550 × 850), ja ne voi avata selaimessa tai tulostaa. Kuvan ja knoppitiedon lähteet kulkevat mukana. HTML-lataus sisältää kaikki kuvat ja toimii ilman verkkoyhteyttä.
 
 Tarkistukset: `node tools/check.cjs` ja `node tools/check-photocards.cjs`. Jälkimmäinen tarkistaa myös buusterin pysyvyyden, kaksoislunastusten eston, loppukokoelman 0–4 vaihtoehdon tilanteet ja aiempien tallennusten siirtymisen.
+
+## Espanjan pohja ja kertausarvio
+
+`/sisalto/5/espanja/pohja.html` on julkinen odotussivu; `pohja.js` sisältää tyhjän luonnoksen. Koealue, vuosiluokka ja tehtävät vahvistetaan ennen avaamista. Muuta status pois draft-tilasta vasta, kun tehtävät on tarkistettu, luo koesivu perusteet.html-pohjasta ja lisää oikea tehtävämäärä luetteloon.
+
+Yhteinen assets/review.js arvioi tämän tarkistuksen vastaukset tehtävien skill-tunnisteilla; ilman tunnistetta käytetään osiota. skills-olion title ja reviewTip määrittävät taitokohtaisen kertauksen. Osioissa voi määrittää reviewTip-varavinkin. Lisää jokaiseen tehtävään id, section, skill, prompt, answers, explanation ja tarvittaessa options. Älä päättele lapsen yleistä osaamista yhdestä kokeesta. Puuttuvat vastaukset raportoidaan erikseen, eivät osaamisvirheinä. Kertausjärjestys määräytyy vastattujen tehtävien virheosuuden ja virhemäärän perusteella. Täydet pisteet antavat ylläpitovinkin. K-pop-paketissa sama moottori on upotettu offline-käyttöä varten. Kun muokkaat sitä, päivitä upotettu kopio ja CSP-tiiviste.
+
+Espanjan aksentteja tai ñ-kirjainta ei poisteta normalisoinnissa. Lisää vain kieliopillisesti hyväksytyt vastausvaihtoehdot. Sisältöpohja ei vielä sisällä kuuntelutehtäviä eikä vapaiden kirjoitelmien arviointia. Analyysi on sääntöpohjainen ja toimii kokonaan selaimessa.

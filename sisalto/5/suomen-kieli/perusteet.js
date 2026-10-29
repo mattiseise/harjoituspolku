@@ -7,19 +7,23 @@ window.QUIZ = {
   "sections": [
     {
       "title": "Sanaluokat",
-      "intro": "Tunnista verbien, nominien ja taipumattomien sanojen erot."
+      "intro": "Tunnista verbien, nominien ja taipumattomien sanojen erot.",
+      "reviewTip": "Kertaa sanaluokkien tuntomerkit. Poimi kolme sanaa arjesta ja kerro, mitä sanaluokkaa ne ovat ja mistä tunnistit sen."
     },
     {
       "title": "Nominien sijamuodot",
-      "intro": "Harjoittele nominatiivia, genetiiviä, partitiivia ja paikallissijoja."
+      "intro": "Harjoittele nominatiivia, genetiiviä, partitiivia ja paikallissijoja.",
+      "reviewTip": "Kertaa sijamuotojen kysymykset ja päätteet. Taivuta yksi sana: kissa, kissan, kissaa. Keksi sitten oma lause jokaiselle muodolle."
     },
     {
       "title": "Verbien aikamuodot",
-      "intro": "Tunnista neljä aikamuotoa ja taivuta verbejä."
+      "intro": "Tunnista neljä aikamuotoa ja taivuta verbejä.",
+      "reviewTip": "Kertaa aikamuodot: teen, tein, olen tehnyt ja olin tehnyt. Taivuta sama verbi kaikissa neljässä muodossa ja kerro, milloin tekeminen tapahtuu."
     },
     {
       "title": "Kielteiset muodot ja soveltaminen",
-      "intro": "Näytä, että osaat käyttää sääntöjä myös uusissa tilanteissa."
+      "intro": "Näytä, että osaat käyttää sääntöjä myös uusissa tilanteissa.",
+      "reviewTip": "Kertaa kieltoverbi ja yksikkö–monikko: en ole, emme ole, en ollut, emme olleet. Muuta kolme myönteistä lausetta kielteisiksi ja tarkista myös pääverbin muoto."
     }
   ],
   "questions": [
@@ -36,7 +40,8 @@ window.QUIZ = {
       "answers": [
         "Verbi"
       ],
-      "explanation": "Verbi kertoo tekemisestä, tapahtumisesta tai olemisesta."
+      "explanation": "Verbi kertoo tekemisestä, tapahtumisesta tai olemisesta.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q1",
@@ -51,7 +56,8 @@ window.QUIZ = {
       "answers": [
         "Adjektiivi"
       ],
-      "explanation": "Adjektiivi kuvailee asiaa tai ominaisuutta."
+      "explanation": "Adjektiivi kuvailee asiaa tai ominaisuutta.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q2",
@@ -66,7 +72,8 @@ window.QUIZ = {
       "answers": [
         "Numeraali"
       ],
-      "explanation": "Numeraali ilmaisee lukumäärän."
+      "explanation": "Numeraali ilmaisee lukumäärän.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q3",
@@ -81,7 +88,8 @@ window.QUIZ = {
       "answers": [
         "Pronomini"
       ],
-      "explanation": "Pronomini voi korvata substantiivin."
+      "explanation": "Pronomini voi korvata substantiivin.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q4",
@@ -96,7 +104,8 @@ window.QUIZ = {
       "answers": [
         "Substantiivi"
       ],
-      "explanation": "Substantiivi nimeää asioita ja esineitä."
+      "explanation": "Substantiivi nimeää asioita ja esineitä.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q5",
@@ -110,7 +119,8 @@ window.QUIZ = {
       "answers": [
         "Nomineihin"
       ],
-      "explanation": "Nominit taipuvat sijamuodoissa."
+      "explanation": "Nominit taipuvat sijamuodoissa.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q6",
@@ -125,7 +135,8 @@ window.QUIZ = {
       "answers": [
         "koska"
       ],
-      "explanation": "Konjunktio yhdistää sanoja ja lauseita."
+      "explanation": "Konjunktio yhdistää sanoja ja lauseita.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q7",
@@ -140,7 +151,8 @@ window.QUIZ = {
       "answers": [
         "oho"
       ],
-      "explanation": "Oho on huudahdus."
+      "explanation": "Oho on huudahdus.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q8",
@@ -155,7 +167,8 @@ window.QUIZ = {
       "answers": [
         "ulkona"
       ],
-      "explanation": "Ulkona kertoo, missä ollaan."
+      "explanation": "Ulkona kertoo, missä ollaan.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q9",
@@ -170,7 +183,8 @@ window.QUIZ = {
       "answers": [
         "kauniisti"
       ],
-      "explanation": "Kauniisti kertoo, miten jotakin tehdään."
+      "explanation": "Kauniisti kertoo, miten jotakin tehdään.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q10",
@@ -185,7 +199,8 @@ window.QUIZ = {
       "answers": [
         "eilen"
       ],
-      "explanation": "Eilen ilmaisee aikaa."
+      "explanation": "Eilen ilmaisee aikaa.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q11",
@@ -200,7 +215,8 @@ window.QUIZ = {
       "answers": [
         "paljon"
       ],
-      "explanation": "Paljon ilmaisee määrää."
+      "explanation": "Paljon ilmaisee määrää.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q12",
@@ -214,7 +230,8 @@ window.QUIZ = {
       "answers": [
         "Genetiivi"
       ],
-      "explanation": "Genetiivi vastaa esimerkiksi kysymykseen kenen?"
+      "explanation": "Genetiivi vastaa esimerkiksi kysymykseen kenen?",
+      "skill": "sijamuodot"
     },
     {
       "id": "q13",
@@ -228,7 +245,8 @@ window.QUIZ = {
       "answers": [
         "Partitiivi"
       ],
-      "explanation": "Partitiivi vastaa kysymykseen mitä? tai ketä?"
+      "explanation": "Partitiivi vastaa kysymykseen mitä? tai ketä?",
+      "skill": "sijamuodot"
     },
     {
       "id": "q14",
@@ -242,7 +260,8 @@ window.QUIZ = {
       "answers": [
         "Nominatiivi"
       ],
-      "explanation": "Nominatiivi on sanan perusmuoto."
+      "explanation": "Nominatiivi on sanan perusmuoto.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q15",
@@ -252,7 +271,8 @@ window.QUIZ = {
       "answers": [
         "koulun"
       ],
-      "explanation": "Genetiivin pääte on tavallisesti -n."
+      "explanation": "Genetiivin pääte on tavallisesti -n.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q16",
@@ -262,7 +282,8 @@ window.QUIZ = {
       "answers": [
         "kirjaa"
       ],
-      "explanation": "Partitiivi: luen kirjaa."
+      "explanation": "Partitiivi: luen kirjaa.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q17",
@@ -272,7 +293,8 @@ window.QUIZ = {
       "answers": [
         "koiran"
       ],
-      "explanation": "Kenen? Koiran."
+      "explanation": "Kenen? Koiran.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q18",
@@ -282,7 +304,8 @@ window.QUIZ = {
       "answers": [
         "metsää"
       ],
-      "explanation": "Mitä? Metsää."
+      "explanation": "Mitä? Metsää.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q19",
@@ -292,7 +315,8 @@ window.QUIZ = {
       "answers": [
         "saaren"
       ],
-      "explanation": "Huomaa vartalon muutos: saari → saaren."
+      "explanation": "Huomaa vartalon muutos: saari → saaren.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q20",
@@ -302,7 +326,8 @@ window.QUIZ = {
       "answers": [
         "talossa"
       ],
-      "explanation": "Missä? Talossa."
+      "explanation": "Missä? Talossa.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q21",
@@ -312,7 +337,8 @@ window.QUIZ = {
       "answers": [
         "koulusta"
       ],
-      "explanation": "Mistä? Koulusta."
+      "explanation": "Mistä? Koulusta.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q22",
@@ -322,7 +348,8 @@ window.QUIZ = {
       "answers": [
         "kauppaan"
       ],
-      "explanation": "Mihin? Kauppaan."
+      "explanation": "Mihin? Kauppaan.",
+      "skill": "sijamuodot"
     },
     {
       "id": "q23",
@@ -336,7 +363,8 @@ window.QUIZ = {
       "answers": [
         "Ensimmäisessä mennään sisään ja toisessa tullaan ulos"
       ],
-      "explanation": "Majaan = mihin? Majasta = mistä?"
+      "explanation": "Majaan = mihin? Majasta = mistä?",
+      "skill": "sijamuodot"
     },
     {
       "id": "q24",
@@ -351,7 +379,8 @@ window.QUIZ = {
       "answers": [
         "Preesens"
       ],
-      "explanation": "Preesens ilmaisee nykyhetkeä tai tulevaa."
+      "explanation": "Preesens ilmaisee nykyhetkeä tai tulevaa.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q25",
@@ -366,7 +395,8 @@ window.QUIZ = {
       "answers": [
         "Imperfekti"
       ],
-      "explanation": "Imperfekti kertoo menneestä."
+      "explanation": "Imperfekti kertoo menneestä.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q26",
@@ -381,7 +411,8 @@ window.QUIZ = {
       "answers": [
         "Perfekti"
       ],
-      "explanation": "Perfekti muodostetaan olla-verbin preesensillä ja pääverbin muodolla."
+      "explanation": "Perfekti muodostetaan olla-verbin preesensillä ja pääverbin muodolla.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q27",
@@ -396,7 +427,8 @@ window.QUIZ = {
       "answers": [
         "Pluskvamperfekti"
       ],
-      "explanation": "Pluskvamperfektissä apuverbi on imperfektissä: olin."
+      "explanation": "Pluskvamperfektissä apuverbi on imperfektissä: olin.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q28",
@@ -407,7 +439,8 @@ window.QUIZ = {
         "luin",
         "minä luin"
       ],
-      "explanation": "Minä luin eilen."
+      "explanation": "Minä luin eilen.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q29",
@@ -418,7 +451,8 @@ window.QUIZ = {
         "on syönyt",
         "hän on syönyt"
       ],
-      "explanation": "Hän on syönyt."
+      "explanation": "Hän on syönyt.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q30",
@@ -429,7 +463,8 @@ window.QUIZ = {
         "juoksemme",
         "me juoksemme"
       ],
-      "explanation": "Me juoksemme."
+      "explanation": "Me juoksemme.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q31",
@@ -440,7 +475,8 @@ window.QUIZ = {
         "olivat nukkuneet",
         "he olivat nukkuneet"
       ],
-      "explanation": "He olivat nukkuneet."
+      "explanation": "He olivat nukkuneet.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q32",
@@ -451,7 +487,8 @@ window.QUIZ = {
         "olet mennyt",
         "sinä olet mennyt"
       ],
-      "explanation": "Sinä olet mennyt."
+      "explanation": "Sinä olet mennyt.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q33",
@@ -462,7 +499,8 @@ window.QUIZ = {
         "lauloitte",
         "te lauloitte"
       ],
-      "explanation": "Te lauloitte."
+      "explanation": "Te lauloitte.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q34",
@@ -477,7 +515,8 @@ window.QUIZ = {
       "answers": [
         "Pluskvamperfekti"
       ],
-      "explanation": "Olimme + nähneet = pluskvamperfekti."
+      "explanation": "Olimme + nähneet = pluskvamperfekti.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q35",
@@ -492,7 +531,8 @@ window.QUIZ = {
       "answers": [
         "emme ole käyneet"
       ],
-      "explanation": "Perfektin kielteinen muoto: emme ole käyneet."
+      "explanation": "Perfektin kielteinen muoto: emme ole käyneet.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q36",
@@ -503,7 +543,8 @@ window.QUIZ = {
         "en ole käynyt",
         "minä en ole käynyt"
       ],
-      "explanation": "Kielteinen perfekti: en ole käynyt."
+      "explanation": "Kielteinen perfekti: en ole käynyt.",
+      "skill": "kielto"
     },
     {
       "id": "q37",
@@ -514,7 +555,8 @@ window.QUIZ = {
         "hän ei ollut lähtenyt",
         "ei ollut lähtenyt"
       ],
-      "explanation": "Kielteinen pluskvamperfekti: ei ollut lähtenyt."
+      "explanation": "Kielteinen pluskvamperfekti: ei ollut lähtenyt.",
+      "skill": "kielto"
     },
     {
       "id": "q38",
@@ -525,7 +567,8 @@ window.QUIZ = {
         "me luimme",
         "luimme"
       ],
-      "explanation": "Me luimme."
+      "explanation": "Me luimme.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q39",
@@ -539,7 +582,8 @@ window.QUIZ = {
       "answers": [
         "Olin syönyt ennen kuin lähdin."
       ],
-      "explanation": "Pluskvamperfekti ilmaisee aikaisempaa mennyttä tapahtumaa."
+      "explanation": "Pluskvamperfekti ilmaisee aikaisempaa mennyttä tapahtumaa.",
+      "skill": "aikamuodot"
     },
     {
       "id": "q40",
@@ -554,7 +598,8 @@ window.QUIZ = {
       "answers": [
         "nopeasti"
       ],
-      "explanation": "Nopeasti on tapaa ilmaiseva taipumaton sana."
+      "explanation": "Nopeasti on tapaa ilmaiseva taipumaton sana.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q41",
@@ -569,7 +614,8 @@ window.QUIZ = {
       "answers": [
         "Adjektiivi"
       ],
-      "explanation": "Kaunis on adjektiivi, vaikka se on taipunut sijamuodossa."
+      "explanation": "Kaunis on adjektiivi, vaikka se on taipunut sijamuodossa.",
+      "skill": "sanaluokat"
     },
     {
       "id": "q42",
@@ -580,7 +626,8 @@ window.QUIZ = {
         "he eivät ole juosseet",
         "eivät ole juosseet"
       ],
-      "explanation": "Kielteinen perfekti: he eivät ole juosseet."
+      "explanation": "Kielteinen perfekti: he eivät ole juosseet.",
+      "skill": "kielto"
     },
     {
       "id": "q43",
@@ -594,7 +641,30 @@ window.QUIZ = {
       "answers": [
         "Paikallissija, kysymys keneltä?"
       ],
-      "explanation": "Minulta vastaa kysymykseen keneltä?"
+      "explanation": "Minulta vastaa kysymykseen keneltä?",
+      "skill": "sijamuodot"
     }
-  ]
+  ],
+  "skills": {
+    "sanaluokat": {
+      "title": "Sanaluokat",
+      "reviewTip": "Kertaa sanaluokkien tuntomerkit. Poimi kolme sanaa arjesta ja kerro, mitä sanaluokkaa ne ovat ja mistä tunnistit sen."
+    },
+    "sijamuodot": {
+      "title": "Nominien sijamuodot",
+      "reviewTip": "Kertaa sijamuotojen kysymykset ja päätteet. Taivuta yksi sana: kissa, kissan, kissaa. Keksi sitten oma lause jokaiselle muodolle."
+    },
+    "aikamuodot": {
+      "title": "Verbien aikamuodot",
+      "reviewTip": "Kertaa aikamuodot: teen, tein, olen tehnyt ja olin tehnyt. Taivuta sama verbi kaikissa neljässä muodossa ja kerro, milloin tekeminen tapahtuu."
+    },
+    "kielto": {
+      "title": "Kielteiset verbimuodot",
+      "reviewTip": "Kertaa kieltoverbi ja yksikkö–monikko: en ole, emme ole, en ollut, emme olleet. Muuta kolme myönteistä lausetta kielteisiksi ja tarkista myös pääverbin muoto."
+    },
+    "passiivi": {
+      "title": "Passiivi",
+      "reviewTip": "Kertaa passiivi: lauletaan, laulettiin, on laulettu, oli laulettu. Harjoittele myös kieltoa: ei ole laulettu ja ei ollut laulettu. Kirjoita kaksi omaa esimerkkiä."
+    }
+  }
 };
