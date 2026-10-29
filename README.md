@@ -92,3 +92,44 @@ Espanjan aksentteja tai ñ-kirjainta ei poisteta normalisoinnissa. Lisää vain 
 assets/rewards.js ylläpitää yhtä korttikokoelmaa. Standardimoottorin jokainen kokonainen tarkistus avaa saman yritystunnisteen buusterin palkintosivulla; korjaustarkistus ei tuota lisäbuusteria. Alusta aloittaminen luo uuden yrityksen. Espanjan pohja käyttää tätä ratkaisua, kun tehtävät avataan standardin quiz.js-moottorilla. Luonnos ei avaa palkintoa. K-pop-paketti sisältää samasta moduulista upotetun kopion ja siirtää vanhat kortit automaattisesti yhteiseen kokoelmaan.
 
 Oletuksena sessionStorage säilyttää kokoelman saman välilehden sivusiirtymissä ja uudelleenlatauksissa. Muista tällä laitteella siirtää sen localStorageen tässä selaimessa. Eri laitteilla tai selaimilla ei ole synkronointia. Yhteiset palkinnot vaativat selaintallennuksen; estetty tallennus näytetään palautteessa. Tavallisen kokeen vastaukset ovat edelleen sivun muistissa.
+
+
+## Espanjan mobiiliharjoitukset (5. luokka)
+
+- `sisalto/5/espanja/jaatelobaari.html`: 16 tehtävää, kaikki 12 jäätelömakua ja tilaaminen.
+- `sisalto/5/espanja/saaseikkailu.html`: 16 tehtävää, vuodenajat ja sää.
+- `sisalto/5/espanja/kpop-finaali.html`: 19 tehtävää, querer- ja ir-verbien kaikki persoonat, sanasto ja kertaus.
+- Vanha `pohja.html` toimii valintasivuna myös aiemmista kirjanmerkeistä.
+
+Sisältö on laadittu käyttäjän lähettämien yhdeksän oppikirjakuvan perusteella. Kuvissa näkyvät sivut 186–189, 192–195, 202–207 ja 210 (yksi aukeama kahdesti). Alueen otsikkona käytetään sivuja 186–210, mutta kaikkia väliin jääviä sivuja ei ollut kuvissa. Tehtävien tilanteet ovat uusia; oppikirjakuvia, kuvituksia tai kokonaisia tekstejä ei julkaista. Lähdesisällöt: 12 makua, tilaaminen, pallot ja koot, querer, vuodenajat ja sää sekä kappaleen 12 sanasto ja ir. Espanjan aksentit ja ñ tarkistetaan täsmällisesti. Isot kirjaimet, NFC/NFD-esitys, alun ¿/¡ ja lopun piste/huuto-/kysymysmerkki sallitaan.
+
+### Uusien tehtävien tietomalli
+
+Yhteisessä `assets/quiz.js`-moottorissa tavalliset tekstivastaukset ja monivalinnat säilyvät yhteensopivina. Uudet tyypit:
+
+- `type: 'match'`, `pairs: [{left, right}, ...]`, valinnainen `choices`: jokainen pari täytetään. Vastauksen tila on kohteiden järjestyksessä oleva merkkijonotaulukko. Saman sanan siirtäminen toiseen kohteeseen tyhjentää edellisen parin.
+- `type: 'order'`, `tokens: [...]`, `answers: ['hyväksyttävä koko lause', ...]`: kaikki palikat käytetään, myös mahdolliset samanlaiset sanat ovat erillisiä palikoita. Vastauksen tila on sanataulukko.
+- `type: 'select'`, `sentence`, `options`, `answers`: nimetty natiivi sananvalintakenttä. Tyhjä aloitusvaihtoehto ei ole vastaus.
+
+`Grading.answered`, `check`, `display` ja `solution` käsittelevät kaikki tyypit. Jokainen kokonainen tehtävä on yksi piste. Keskeneräinen parilista/lause ei täytä valmistumismittaria, ei anna palkintoa eikä tule henkilökohtaisessa palautteessa tulkituksi osaamisvirheeksi. Täyteen vastattu väärä tehtävä ohjaa kertaukseen. Osittaista pisteytystä ei käytetä. Korjaus piilottaa vanhan tuloksen ja palkintolinkin; uudelleentarkistus säilyttää saman harjoituskerran palkintotunnisteen. Nollaus aloittaa uuden harjoituskerran.
+
+`assets/interactions.js` tarjoaa Pointer Events -raahauksen hiirelle, kynälle ja kosketukselle. Kaikki toiminnot ovat käytettävissä myös napautuksilla ja Tab/Enter/välilyönti-näppäimillä. Lauseesta voi poistaa palikan painamalla sitä; Alt + vasen/oikea nuoli siirtää sitä. Ruudunlukijalle ilmoitetaan valinta ja muuttunut vastaus. Pitkät ohjeet voi avata erikseen. Lisää `interactions.js` ennen `quiz.js`:ää uudelle koesivulle. `language: 'es'` merkitsee espanjankieliset syötteet ja palikat.
+
+Kokoelma käyttää muuttamatonta `assets/rewards.js`:ää ja aiempaa yhteistä palkintosivua. Suomen kielen ja Espanjan kortit kertyvät samaan kokoelmaan. Vastaukset pysyvät sivun muistissa; kortit muistetaan myöhemminkin vain käyttäjän valitessa laitteelle muistamisen.
+
+### Tarkistukset
+
+Aja aiempien tarkistusten lisäksi `node tools/check-spanish.cjs`. Se tarkistaa kaikki 51 tehtävää, palikoiden vastaavuuden, keskeneräiset ja väärät yhdistelmät, aksentit, verbien kuusi persoonaa, 12 makua ja kertauspalautteen. Windowsissa aiemmat sisennetyn skriptin/CSP:n ja offline-kopioiden tarkistukset normalisoivat CRLF-rivinvaihdot LF:ksi kuten HTML-jäsennin.
+
+Selaimessa tarkistettu 320 ja 390 pikselin mobiilinäkymät: kaikki kolme koetta kokonaisilla oikeilla vastauksilla (16/16, 16/16 ja 19/19), aksentti- ja verbivirheiden palaute, keskeneräiset tehtävät, näppäimistö, parin ja lausepalikan raahaus, poistaminen, järjestyksen korjaaminen, nollaus sekä yhteisen buusterin avaaminen ja yhden kortin siirtyminen toiseen espanjan harjoitukseen. Testaus on tehty työpöytäselaimen mobiilikoossa; fyysistä puhelinta ei ole käytetty.
+
+
+### Sanasukka / kirjainkäärme
+
+`type: 'wordhunt'`, `strip` (NFC-kirjainjono, viidellä jaollinen pituus), `words` (yksilölliset espanjan sanat), `clues` (vastaavat suomenkieliset vihjeet). `assets/wordhunt.js` ladataan ennen `interactions.js`:ää. Kirjaimet taittuvat viiden kirjaimen riveihin vuorotellen vasemmalta ja oikealta, jolloin nauha muodostaa käärmeen. Sana voi ylittää rivin mutkan.
+
+Maalaus käyttää Pointer Events -tapahtumia ja kirjainkohtaisia loogisia indeksejä. Rajaus sallitaan molempiin suuntiin. Täsmälleen löydetty sana jää korostetuksi; väärä rajaus antaa paikallisen uuden yrityksen, eikä se muuta aiemmin löydettyjä sanoja. Sanasukka on yksi piste ja valmistuu vasta kaikkien sanojen löydyttyä. Vain osa sanoista löydettynä se on keskeneräinen myös kertauspalautteessa ja palkinnon ehdoissa. Sama sana ei kasvata laskuria toistamiseen.
+
+Napautusvaihtoehdossa valitaan sanan alku ja loppu. Näppäimistöllä kirjaimiston sisällä liikutaan nuolilla (vain yksi kirjain kerrallaan Tab-järjestyksessä), alku ja loppu valitaan Enterillä/välilyönnillä ja Escape peruu valinnan. Alkuperäiset kirjainmuodot, myös Ñ, säilyvät. Vastaustilana on löydettyjen sanojen taulukko. Nollaus poistaa kaikki löydöt ja keskeneräiset valinnat.
+
+Jokaisessa kolmessa espanjan harjoituksessa on yksi Sanasukka. Selaimessa on tarkistettu väärä rajaus, sanan maalaus mutkan yli, maalaus takaperin, napautukset, näppäimistö, yhden tehtävän valmistumislaskuri, yhteinen tarkistus ja löydettyjen sanojen nollaus. Koko kokeen nollauksessa korjattiin samalla aiempi lomakkeen `reset`-painikkeen nimiristiriita kutsumalla nollausta suoraan `HTMLFormElement`-prototyypistä.
