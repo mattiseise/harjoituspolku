@@ -25,12 +25,16 @@ Suora jaettava valikko: `?luokka=5&aine=Suomen+kieli#kokeet`. Muut luokat toimiv
 
 ## Lisää harjoitus
 
-1. Tee kansio `sisalto/<luokka>/<aine>/`. Kopioi nykyisen kokeen HTML- ja JS-tiedosto uusiksi tiedostoiksi tai lisää tarkistettu itsenäinen HTML-koe omaan kansioonsa.
-2. Muokkaa sivun otsikko, murupolku ja tehtävädata. Yhteisen kokeen data asettaa `window.QUIZ`: `id`, `title`, `grade`, `subject`, `sections` ja `questions`. Kysymyksessä: yksilöllinen `id`, nollasta alkava `section`, `prompt`, `options` (taulukko tai null), `answers` (hyväksytyt vastaukset) ja `explanation`. Monivalinnan vastausavain sisältää vaihtoehdon tekstin.
-3. Lisää merkintä `sisalto/kokeet.js`-taulukkoon: yksilöllinen `id`, `grade` (1–9), `subject`, `title`, `description`, `count`, `minutes`, `href` (suhteessa etusivuun) ja `tags`.
-4. Uuden data- tai HTML-tiedoston tulee olla tarkistettu aikuisen toimesta. Tarkista myös, että kirjoitustehtävässä on riittävän täsmällinen pyyntö ja kaikki hyväksyttävät vastaukset. Älä korvaa ä/ö-kirjaimia a/o-kirjaimilla.
-5. Suorita `node tools/check.cjs`. Käynnistä esikatselu `python -m http.server 4173` ja avaa `http://localhost:4173`. Testaa puhelinleveys, näppäimistö, tyhjät/oikeat/väärät vastaukset, korjauskierros ja palkinto.
-6. Tallenna muutokset `main`-haaraan. Pages julkaisee ne automaattisesti. Varmista onnistunut `pages build and deployment` ja kokeile julkista osoitetta.
+**Agentti: aloita [handoff-ohjeesta](docs/HANDOFF.md) ja [AGENTS.md](AGENTS.md)-tiedostosta.**
+Kaikkien aineiden yhteinen standardi on [koemoottorin ohje](docs/koemoottori.md).
+
+1. Kopioi `templates/koe.json` omaksi JSON-lähteeksi ja kirjoita koealueen tehtävät, vastausavaimet, selitykset ja taitovinkit. Pohja sisältää esimerkit kaikista kahdeksasta tehtävätyypistä.
+2. Valitse teema (`neon`, `pastel`, `galaxy`) ja luo sivu: `node tools/create-exam.cjs --input <koe.json>`. Yhteinen ulkoasu, tarkistus, palaute, saavutettavat ohjaimet ja korttipalkinnot tulevat mukana. Luonnos ei ole suoritettava.
+3. Aseta sisällöltään tarkistettu koe `ready`-tilaan ja generoi uudelleen `--replace`-valinnalla. Testaa ohjeen mukaisesti myös mobiili, keskeneräiset ja väärät vastaukset sekä yhteinen buusteri.
+4. Lisää valmis koe kirjastoon: `node tools/create-exam.cjs --input <koe.json> --replace --register`.
+5. Julkaise samaan repoon käyttäjän rajauksen mukaan ja varmista Pages-työnkulku sekä julkinen sisältö.
+
+Älä kopioi vanhaa perusteet-sivua tai itsenäisen K-pop-paketin sisäistä sovellusta uuden kokeen pohjaksi. Säilytä oman kokeen JSON-lähde sen sisältökansiossa ilman yksityistä lähdeaineistoa.
 
 ### Alkuperäisen K-pop-paketin tuonti
 
@@ -81,7 +85,7 @@ Tarkistukset: `node tools/check.cjs` ja `node tools/check-photocards.cjs`. Jälk
 
 ## Espanjan pohja ja kertausarvio
 
-`/sisalto/5/espanja/pohja.html` on julkinen odotussivu; `pohja.js` sisältää tyhjän luonnoksen. Koealue, vuosiluokka ja tehtävät vahvistetaan ennen avaamista. Muuta status pois draft-tilasta vasta, kun tehtävät on tarkistettu, luo koesivu perusteet.html-pohjasta ja lisää oikea tehtävämäärä luetteloon.
+`sisalto/5/espanja/pohja.html` on kolmen valmiin harjoituksen valintasivu. Uudet kokeet tehdään yhteisellä koepohjalla yllä olevan ohjeen mukaan.
 
 Yhteinen assets/review.js arvioi tämän tarkistuksen vastaukset tehtävien skill-tunnisteilla; ilman tunnistetta käytetään osiota. skills-olion title ja reviewTip määrittävät taitokohtaisen kertauksen. Osioissa voi määrittää reviewTip-varavinkin. Lisää jokaiseen tehtävään id, section, skill, prompt, answers, explanation ja tarvittaessa options. Älä päättele lapsen yleistä osaamista yhdestä kokeesta. Puuttuvat vastaukset raportoidaan erikseen, eivät osaamisvirheinä. Kertausjärjestys määräytyy vastattujen tehtävien virheosuuden ja virhemäärän perusteella. Täydet pisteet antavat ylläpitovinkin. K-pop-paketissa sama moottori on upotettu offline-käyttöä varten. Kun muokkaat sitä, päivitä upotettu kopio ja CSP-tiiviste.
 
@@ -89,7 +93,7 @@ Espanjan aksentteja tai ñ-kirjainta ei poisteta normalisoinnissa. Lisää vain 
 
 ## Kaikkien oppiaineiden yhteiset palkinnot
 
-assets/rewards.js ylläpitää yhtä korttikokoelmaa. Standardimoottorin jokainen kokonainen tarkistus avaa saman yritystunnisteen buusterin palkintosivulla; korjaustarkistus ei tuota lisäbuusteria. Alusta aloittaminen luo uuden yrityksen. Espanjan pohja käyttää tätä ratkaisua, kun tehtävät avataan standardin quiz.js-moottorilla. Luonnos ei avaa palkintoa. K-pop-paketti sisältää samasta moduulista upotetun kopion ja siirtää vanhat kortit automaattisesti yhteiseen kokoelmaan.
+assets/rewards.js ylläpitää yhtä korttikokoelmaa. Standardimoottorin jokainen kokonainen tarkistus avaa saman yritystunnisteen buusterin palkintosivulla; korjaustarkistus ei tuota lisäbuusteria. Alusta aloittaminen luo uuden yrityksen. Espanjan kaikki kolme harjoitusta käyttävät tätä ratkaisua yhteisellä quiz.js-moottorilla. Luonnos ei avaa palkintoa. K-pop-paketti sisältää samasta moduulista upotetun kopion ja siirtää vanhat kortit automaattisesti yhteiseen kokoelmaan.
 
 Oletuksena sessionStorage säilyttää kokoelman saman välilehden sivusiirtymissä ja uudelleenlatauksissa. Muista tällä laitteella siirtää sen localStorageen tässä selaimessa. Eri laitteilla tai selaimilla ei ole synkronointia. Yhteiset palkinnot vaativat selaintallennuksen; estetty tallennus näytetään palautteessa. Tavallisen kokeen vastaukset ovat edelleen sivun muistissa.
 

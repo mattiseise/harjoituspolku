@@ -1,0 +1,190 @@
+{
+  "id": "malli-5-englanti",
+  "title": "Uuden kokeen malli",
+  "grade": 5,
+  "subject": "Englanti",
+  "subjectSlug": "englanti",
+  "slug": "uusi-koe",
+  "theme": "pastel",
+  "language": "en",
+  "status": "draft",
+  "description": "Vaihda nämä mallitehtävät oman koealueen tarkistettuihin tehtäviin.",
+  "minutes": "10–20",
+  "tags": [
+    "Mallipohja"
+  ],
+  "sourceNote": "Mallitehtäviä tietomallin esittelyyn. Lisää uuden kokeen todellinen koealue ja lähteet tähän.",
+  "writingNote": "Oikea kirjoitusasu ja tehtävässä pyydetty verbimuoto tarvitaan.",
+  "skills": {
+    "sanasto": {
+      "title": "Sanasto",
+      "reviewTip": "Peitä mallivastaukset, sano sanat muistista ja kirjoita niistä kaksi omaa virkettä."
+    },
+    "virkkeet": {
+      "title": "Virkkeet",
+      "reviewTip": "Tunnista virkkeen tekijä ja verbi. Kokoa tai kirjoita virke uudelleen ilman mallia."
+    }
+  },
+  "sections": [
+    {
+      "title": "Sanat",
+      "intro": "Monivalinta, kirjoittaminen ja yhdistäminen."
+    },
+    {
+      "title": "Virkkeet",
+      "intro": "Sanapalikat, sananvalinta, aukot ja kääntäminen."
+    },
+    {
+      "title": "Sanasukka",
+      "intro": "Maalaa piilotetut sanat tai valitse niiden alku ja loppu."
+    }
+  ],
+  "questions": [
+    {
+      "id": "malli-1",
+      "section": 0,
+      "skill": "sanasto",
+      "prompt": "Mikä on kissa englanniksi?",
+      "options": [
+        "cat",
+        "dog",
+        "sun"
+      ],
+      "answers": [
+        "cat"
+      ],
+      "explanation": "Cat tarkoittaa kissaa."
+    },
+    {
+      "id": "malli-2",
+      "section": 0,
+      "skill": "sanasto",
+      "prompt": "Kirjoita koira englanniksi (yksi sana).",
+      "answers": [
+        "dog"
+      ],
+      "explanation": "Dog tarkoittaa koiraa."
+    },
+    {
+      "id": "malli-3",
+      "section": 0,
+      "skill": "sanasto",
+      "type": "match",
+      "prompt": "Yhdistä sanat.",
+      "pairs": [
+        {
+          "left": "kissa",
+          "right": "cat"
+        },
+        {
+          "left": "koira",
+          "right": "dog"
+        },
+        {
+          "left": "aurinko",
+          "right": "sun"
+        }
+      ],
+      "answers": [
+        "kissa → cat; koira → dog; aurinko → sun"
+      ],
+      "explanation": "Cat = kissa, dog = koira ja sun = aurinko."
+    },
+    {
+      "id": "malli-4",
+      "section": 1,
+      "skill": "virkkeet",
+      "type": "order",
+      "prompt": "Kokoa virke: ”Minulla on koira.”",
+      "tokens": [
+        "a",
+        "dog",
+        "have",
+        "I"
+      ],
+      "answers": [
+        "I have a dog"
+      ],
+      "explanation": "I have a dog = Minulla on koira."
+    },
+    {
+      "id": "malli-5",
+      "section": 1,
+      "skill": "virkkeet",
+      "type": "select",
+      "prompt": "Valitse oikea sana.",
+      "sentence": "She ___ a cat.",
+      "options": [
+        "has",
+        "have",
+        "am"
+      ],
+      "answers": [
+        "has"
+      ],
+      "explanation": "She tarvitsee tässä muodon has."
+    },
+    {
+      "id": "malli-6",
+      "section": 1,
+      "skill": "virkkeet",
+      "type": "gap",
+      "prompt": "Täydennä virke englanniksi.",
+      "sentence": "I ___ a ___.",
+      "gaps": [
+        {
+          "clue": "minulla on",
+          "answers": [
+            "have"
+          ]
+        },
+        {
+          "clue": "kissa",
+          "answers": [
+            "cat"
+          ]
+        }
+      ],
+      "answers": [
+        "I have a cat."
+      ],
+      "explanation": "I have a cat = Minulla on kissa."
+    },
+    {
+      "id": "malli-7",
+      "section": 1,
+      "skill": "virkkeet",
+      "type": "translate",
+      "prompt": "Käännä koko virke suomeksi.",
+      "source": "I have a dog.",
+      "sourceLanguage": "en",
+      "language": "fi",
+      "answers": [
+        "Minulla on koira"
+      ],
+      "explanation": "I have tarkoittaa tässä minulla on, a dog koiraa."
+    },
+    {
+      "id": "malli-8",
+      "section": 2,
+      "skill": "sanasto",
+      "type": "wordhunt",
+      "prompt": "Etsi kissa, koira ja aurinko englanniksi.",
+      "strip": "LUCATXODOGRASUN",
+      "words": [
+        "cat",
+        "dog",
+        "sun"
+      ],
+      "clues": [
+        "kissa",
+        "koira",
+        "aurinko"
+      ],
+      "answers": [
+        "cat, dog, sun"
+      ],
+      "explanation": "Löydettävät sanat ovat cat, dog ja sun."
+    }
+  ]
+}
