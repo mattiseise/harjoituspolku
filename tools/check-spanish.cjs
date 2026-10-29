@@ -6,10 +6,15 @@ const load=slug=>{const s={window:{}};vm.runInNewContext(fs.readFileSync(`sisalt
 // Build an actual permutation of the supplied tokens, retaining punctuation and
 // duplicate word identities, rather than bypassing the interaction with a string.
 function ordered(q,text){const pool=q.tokens.slice();return text.split(' ').map(word=>{const i=pool.findIndex(t=>G.normalize(t)===G.normalize(word));assert(i>=0,`${q.id}: missing token ${word}`);return pool.splice(i,1)[0];});}
-for(const slug of slugs){const quiz=load(slug);assert.equal(quiz.questions.length,slug==='kpop-finaali'?19:16);
+for(const slug of slugs){const quiz=load(slug);assert.equal(quiz.questions.length,slug==='kpop-finaali'?23:20);
+ assert.equal(quiz.questions.filter(q=>q.type==='gap').length,2);assert.equal(quiz.questions.filter(q=>q.type==='translate').length,2);
  const rows=[];
  for(const q of quiz.questions){let answer=q.answers[0];
-  if(q.type==='wordhunt'){
+  if(q.type==='gap'){
+   answer=q.gaps.map(g=>g.answers[0]);assert.equal(q.sentence.split('___').length-1,q.gaps.length);assert.equal(G.solution(q),q.answers[0]);
+   assert(!G.check(q,answer.map(()=>'')));assert(!G.answered(q,answer.slice(1)));const missing=answer.slice();missing[0]=' ';assert(!G.answered(q,missing));
+   for(let i=0;i<q.gaps.length;i++){for(const accepted of q.gaps[i].answers){const variant=answer.slice();variant[i]=accepted.toUpperCase();assert(G.check(q,variant));}const wrong=answer.slice();wrong[i]='väärin';assert(G.answered(q,wrong));assert(!G.check(q,wrong));}
+  }else if(q.type==='wordhunt'){
    answer=q.words.slice();assert.equal(q.strip.length%5,0);assert.equal(q.words.length,q.clues.length);for(const w of q.words){const upper=w.toUpperCase();assert(q.strip.includes(upper));assert.equal(q.strip.indexOf(upper),q.strip.lastIndexOf(upper));}
    assert(!G.answered(q,answer.slice(1)));assert(!G.check(q,[answer[0],answer[0],answer[0]]));assert(G.check(q,answer.slice().reverse()));assert(G.check(q,answer.map(w=>w.toUpperCase())));
   }else if(q.type==='match'){
@@ -31,6 +36,7 @@ for(const slug of slugs){const quiz=load(slug);assert.equal(quiz.questions.lengt
  }
  assert.equal(Review.analyze(quiz.questions,rows,quiz.sections,quiz.skills).priorities.length,0);
  const partial=rows.map(r=>({...r,answered:false,correct:false}));assert.equal(Review.analyze(quiz.questions,partial,quiz.sections,quiz.skills).missing,quiz.questions.length);
+ for(const q of quiz.questions.filter(q=>q.type==='translate')){assert(q.source&&q.sourceLanguage!==q.language);assert(!G.check(q,q.source));}
  const html=fs.readFileSync(`sisalto/5/espanja/${slug}.html`,'utf8');for(const file of ['grading','interactions','quiz','review','rewards'])assert(html.includes(`assets/${file}.js`));assert(html.includes('data-rewards-remember'));assert(html.includes('shared-reward-link'));
 }
 const ice=load(slugs[0]),final=load(slugs[2]);

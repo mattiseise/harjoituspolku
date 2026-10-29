@@ -43,6 +43,10 @@ window.QUIZ = {
     {
       "title": "Oma tilaus",
       "intro": "Palauta sanat mieleen ilman vaihtoehtoja."
+    },
+    {
+      "title": "Täydennä ja käännä",
+      "intro": "Kirjoita aukkoihin puuttuvat sanat. Käännä lopuksi kokonaisia virkkeitä molempiin suuntiin."
     }
   ],
   "questions": [
@@ -337,6 +341,87 @@ window.QUIZ = {
         "fresa, menta, pera"
       ],
       "explanation": "Löydettävät sanat: fresa = mansikka; menta = minttu; pera = päärynä. Sanat kulkevat käärmeen suuntaisesti, myös rivin mutkan yli."
+    },
+    {
+      "type": "gap",
+      "prompt": "Täydennä virkkeen aukot espanjaksi.",
+      "sentence": "Yo ___ un helado de ___.",
+      "gaps": [
+        {
+          "answers": [
+            "quiero"
+          ],
+          "clue": "haluan"
+        },
+        {
+          "answers": [
+            "vainilla"
+          ],
+          "clue": "vanilja"
+        }
+      ],
+      "skill": "querer",
+      "language": "es",
+      "answers": [
+        "Yo quiero un helado de vainilla."
+      ],
+      "explanation": "Kokonainen virke: Yo quiero un helado de vainilla.",
+      "id": "jaatelobaari-17",
+      "section": 3
+    },
+    {
+      "type": "gap",
+      "prompt": "Täydennä virkkeen aukot espanjaksi.",
+      "sentence": "¿Te gusta el helado de fresa? — Sí, me ___.",
+      "gaps": [
+        {
+          "answers": [
+            "gusta"
+          ],
+          "clue": "pidän"
+        }
+      ],
+      "skill": "puhe",
+      "language": "es",
+      "answers": [
+        "¿Te gusta el helado de fresa? — Sí, me gusta."
+      ],
+      "explanation": "Kokonainen virke: ¿Te gusta el helado de fresa? — Sí, me gusta.",
+      "id": "jaatelobaari-18",
+      "section": 3
+    },
+    {
+      "type": "translate",
+      "prompt": "Käännä koko virke espanjaksi.",
+      "source": "Haluamme kaksi palloa.",
+      "sourceLanguage": "fi",
+      "language": "es",
+      "answers": [
+        "Queremos dos bolas",
+        "Nosotros queremos dos bolas",
+        "Nosotras queremos dos bolas"
+      ],
+      "skill": "querer",
+      "explanation": "Queremos = haluamme. Dos bolas = kaksi palloa. Espanjassa persoonapronominin voi tässä jättää pois.",
+      "id": "jaatelobaari-19",
+      "section": 3
+    },
+    {
+      "type": "translate",
+      "prompt": "Käännä koko virke suomeksi.",
+      "source": "No quiero un helado de chocolate.",
+      "sourceLanguage": "es",
+      "language": "fi",
+      "answers": [
+        "En halua suklaajäätelöä",
+        "Minä en halua suklaajäätelöä",
+        "En halua suklaan makuista jäätelöä",
+        "Minä en halua suklaan makuista jäätelöä"
+      ],
+      "skill": "puhe",
+      "explanation": "No quiero = en halua. Un helado de chocolate = suklaajäätelö.",
+      "id": "jaatelobaari-20",
+      "section": 3
     }
   ]
 };

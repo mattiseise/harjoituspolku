@@ -43,6 +43,10 @@ window.QUIZ = {
     {
       "title": "Oma säätiedotus",
       "intro": "Rakenna ja kirjoita sääilmauksia."
+    },
+    {
+      "title": "Täydennä ja käännä",
+      "intro": "Kirjoita aukkoihin puuttuvat sanat. Käännä lopuksi kokonaisia virkkeitä molempiin suuntiin."
     }
   ],
   "questions": [
@@ -328,6 +332,86 @@ window.QUIZ = {
         "otoño, invierno, llueve"
       ],
       "explanation": "Löydettävät sanat: otoño = syksy; invierno = talvi; llueve = sataa vettä. Sanat kulkevat käärmeen suuntaisesti, myös rivin mutkan yli."
+    },
+    {
+      "type": "gap",
+      "prompt": "Täydennä virkkeen aukot espanjaksi.",
+      "sentence": "En ___ hace ___.",
+      "gaps": [
+        {
+          "answers": [
+            "verano"
+          ],
+          "clue": "kesällä"
+        },
+        {
+          "answers": [
+            "calor"
+          ],
+          "clue": "kuuma"
+        }
+      ],
+      "skill": "saa",
+      "language": "es",
+      "answers": [
+        "En verano hace calor."
+      ],
+      "explanation": "Kokonainen virke: En verano hace calor.",
+      "id": "saaseikkailu-17",
+      "section": 3
+    },
+    {
+      "type": "gap",
+      "prompt": "Täydennä virkkeen aukot espanjaksi.",
+      "sentence": "Hoy ___ nublado.",
+      "gaps": [
+        {
+          "answers": [
+            "está"
+          ],
+          "clue": "on"
+        }
+      ],
+      "skill": "saa",
+      "language": "es",
+      "answers": [
+        "Hoy está nublado."
+      ],
+      "explanation": "Kokonainen virke: Hoy está nublado.",
+      "id": "saaseikkailu-18",
+      "section": 3
+    },
+    {
+      "type": "translate",
+      "prompt": "Käännä koko virke espanjaksi.",
+      "source": "On kylmä ja sataa lunta.",
+      "sourceLanguage": "fi",
+      "language": "es",
+      "answers": [
+        "Hace frío y nieva",
+        "Nieva y hace frío"
+      ],
+      "skill": "saa",
+      "explanation": "Hace frío = on kylmä, nieva = sataa lunta ja y = ja. Myös sääilmausten päinvastainen järjestys hyväksytään.",
+      "id": "saaseikkailu-19",
+      "section": 3
+    },
+    {
+      "type": "translate",
+      "prompt": "Käännä koko virke suomeksi.",
+      "source": "En invierno hace frío.",
+      "sourceLanguage": "es",
+      "language": "fi",
+      "answers": [
+        "Talvella on kylmä",
+        "Talvella on kylmää",
+        "On kylmä talvella",
+        "On kylmää talvella"
+      ],
+      "skill": "saa",
+      "explanation": "En invierno = talvella ja hace frío = on kylmä.",
+      "id": "saaseikkailu-20",
+      "section": 3
     }
   ]
 };

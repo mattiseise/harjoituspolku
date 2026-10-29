@@ -96,9 +96,9 @@ Oletuksena sessionStorage säilyttää kokoelman saman välilehden sivusiirtymis
 
 ## Espanjan mobiiliharjoitukset (5. luokka)
 
-- `sisalto/5/espanja/jaatelobaari.html`: 16 tehtävää, kaikki 12 jäätelömakua ja tilaaminen.
-- `sisalto/5/espanja/saaseikkailu.html`: 16 tehtävää, vuodenajat ja sää.
-- `sisalto/5/espanja/kpop-finaali.html`: 19 tehtävää, querer- ja ir-verbien kaikki persoonat, sanasto ja kertaus.
+- `sisalto/5/espanja/jaatelobaari.html`: 20 tehtävää, kaikki 12 jäätelömakua ja tilaaminen.
+- `sisalto/5/espanja/saaseikkailu.html`: 20 tehtävää, vuodenajat ja sää.
+- `sisalto/5/espanja/kpop-finaali.html`: 23 tehtävää, querer- ja ir-verbien kaikki persoonat, sanasto ja kertaus.
 - Vanha `pohja.html` toimii valintasivuna myös aiemmista kirjanmerkeistä.
 
 Sisältö on laadittu käyttäjän lähettämien yhdeksän oppikirjakuvan perusteella. Kuvissa näkyvät sivut 186–189, 192–195, 202–207 ja 210 (yksi aukeama kahdesti). Alueen otsikkona käytetään sivuja 186–210, mutta kaikkia väliin jääviä sivuja ei ollut kuvissa. Tehtävien tilanteet ovat uusia; oppikirjakuvia, kuvituksia tai kokonaisia tekstejä ei julkaista. Lähdesisällöt: 12 makua, tilaaminen, pallot ja koot, querer, vuodenajat ja sää sekä kappaleen 12 sanasto ja ir. Espanjan aksentit ja ñ tarkistetaan täsmällisesti. Isot kirjaimet, NFC/NFD-esitys, alun ¿/¡ ja lopun piste/huuto-/kysymysmerkki sallitaan.
@@ -119,7 +119,7 @@ Kokoelma käyttää muuttamatonta `assets/rewards.js`:ää ja aiempaa yhteistä 
 
 ### Tarkistukset
 
-Aja aiempien tarkistusten lisäksi `node tools/check-spanish.cjs`. Se tarkistaa kaikki 51 tehtävää, palikoiden vastaavuuden, keskeneräiset ja väärät yhdistelmät, aksentit, verbien kuusi persoonaa, 12 makua ja kertauspalautteen. Windowsissa aiemmat sisennetyn skriptin/CSP:n ja offline-kopioiden tarkistukset normalisoivat CRLF-rivinvaihdot LF:ksi kuten HTML-jäsennin.
+Aja aiempien tarkistusten lisäksi `node tools/check-spanish.cjs`. Se tarkistaa kaikki 63 tehtävää, palikoiden vastaavuuden, keskeneräiset ja väärät yhdistelmät, aksentit, verbien kuusi persoonaa, 12 makua ja kertauspalautteen. Windowsissa aiemmat sisennetyn skriptin/CSP:n ja offline-kopioiden tarkistukset normalisoivat CRLF-rivinvaihdot LF:ksi kuten HTML-jäsennin.
 
 Selaimessa tarkistettu 320 ja 390 pikselin mobiilinäkymät: kaikki kolme koetta kokonaisilla oikeilla vastauksilla (16/16, 16/16 ja 19/19), aksentti- ja verbivirheiden palaute, keskeneräiset tehtävät, näppäimistö, parin ja lausepalikan raahaus, poistaminen, järjestyksen korjaaminen, nollaus sekä yhteisen buusterin avaaminen ja yhden kortin siirtyminen toiseen espanjan harjoitukseen. Testaus on tehty työpöytäselaimen mobiilikoossa; fyysistä puhelinta ei ole käytetty.
 
@@ -133,3 +133,15 @@ Maalaus käyttää Pointer Events -tapahtumia ja kirjainkohtaisia loogisia indek
 Napautusvaihtoehdossa valitaan sanan alku ja loppu. Näppäimistöllä kirjaimiston sisällä liikutaan nuolilla (vain yksi kirjain kerrallaan Tab-järjestyksessä), alku ja loppu valitaan Enterillä/välilyönnillä ja Escape peruu valinnan. Alkuperäiset kirjainmuodot, myös Ñ, säilyvät. Vastaustilana on löydettyjen sanojen taulukko. Nollaus poistaa kaikki löydöt ja keskeneräiset valinnat.
 
 Jokaisessa kolmessa espanjan harjoituksessa on yksi Sanasukka. Selaimessa on tarkistettu väärä rajaus, sanan maalaus mutkan yli, maalaus takaperin, napautukset, näppäimistö, yhden tehtävän valmistumislaskuri, yhteinen tarkistus ja löydettyjen sanojen nollaus. Koko kokeen nollauksessa korjattiin samalla aiempi lomakkeen `reset`-painikkeen nimiristiriita kutsumalla nollausta suoraan `HTMLFormElement`-prototyypistä.
+
+
+### Kirjoitettavat aukot, käännökset ja käärmeen liike
+
+Jokaisen espanjan harjoituksen neljännessä osiossa on kaksi `gap`- ja kaksi `translate`-tehtävää. Jäätelöbaari ja Sääseikkailu sisältävät nyt 20 tehtävää ja K-pop-finaali 23. Käännökset kulkevat molempiin suuntiin, ja hyväksyttävät vaihtoehdot määritellään tehtäväkohtaisesti (esimerkiksi persoonapronominin mukana olo, nosotros/nosotras ja luontevat suomen sanajärjestykset). Aksentteja ei ohiteta. Automaattinen tarkistus hyväksyy määritellyt vastaukset; kaikkia mahdollisia vapaita käännöksiä ei arvioida semanttisesti.
+
+- `type: 'gap'`: `sentence` sisältää `___`-merkinnän jokaista aukkoa kohden. `gaps` sisältää `answers`-taulukon ja suomenkielisen `clue`-vihjeen jokaiseen aukkoon. Aukot ovat nimettyjä kirjoituskenttiä itse virkkeessä. Vastauksena on aukkojen järjestyksessä oleva merkkijonotaulukko. Kaikki aukot tarvitaan valmistumiseen ja yhteen pisteeseen. Tarkistus hyväksyy kunkin aukon vaihtoehdot toisistaan riippumatta. Vienti ja mallivastaus näyttävät kokonaisen virkkeen.
+- `type: 'translate'`: `source`, `sourceLanguage`, vastauksen `language` ja hyväksyttävät kokonaiset `answers`. Käyttää yhteistä tekstivastauksen tarkistusta ja näyttää lähtövirkkeen erikseen oikealla kielellä. Vastauksen kieltä käytetään vastauskentän kielimerkintänä.
+
+Käärmeen CSS-hahmolla on kasvot, räpyttävät silmät, ajoittain näkyvä kieli ja heilahtava häntä. Kirjainkentät ja niiden maalausalueet pysyvät paikallaan. Tehtäväkohtainen painike pysäyttää/käynnistää liikkeen. `prefers-reduced-motion: reduce` estää animaatiot, piilottaa kielen ja poistaa käynnistyksen käytöstä; asetus huomioidaan myös sen vaihtuessa sivun ollessa auki. Hahmon koristeet eivät kuulu ruudunlukijan sisältöön.
+
+Uusien tehtävien tarkistus sisältää aukkojen puuttuvat, väärät ja hyväksyttävät vaihtoehdot sekä käännösten vaihtoehdot. Selaimessa on tarkistettu kaikkien 12 lisätehtävän oikeat vastaukset, keskeneräinen moniaukkotehtävä, aksenttivirhe, 320 pikselin asettelu ja käärmeen liikkeen pysäyttäminen/käynnistäminen.

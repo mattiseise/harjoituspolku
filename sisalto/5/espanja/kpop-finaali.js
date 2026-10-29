@@ -29,6 +29,10 @@ window.QUIZ = {
     "sanasto": {
       "title": "Kappaleiden sanasto",
       "reviewTip": "Tee omat sanakortit: una sorpresa, pronto, viajar, una aventura, además, donde, sin ja perdón. Keksi kahdesta sanasta oma lause."
+    },
+    "verbit": {
+      "title": "Querer ja ir yhdessä",
+      "reviewTip": "Taivuta ensin querer (haluta) ja ir (mennä) kaikissa kuudessa persoonassa. Alleviivaa virkkeen tekijät ja valitse molempiin aukkoihin tekijään sopiva muoto."
     }
   },
   "sections": [
@@ -43,6 +47,10 @@ window.QUIZ = {
     {
       "title": "Finaalikierros",
       "intro": "Yhdistä sanastoa, rakenna lauseita ja kertaa säätä."
+    },
+    {
+      "title": "Täydennä ja käännä",
+      "intro": "Kirjoita aukkoihin puuttuvat sanat. Käännä lopuksi kokonaisia virkkeitä molempiin suuntiin."
     }
   ],
   "questions": [
@@ -345,6 +353,90 @@ window.QUIZ = {
         "queremos, vamos, pronto"
       ],
       "explanation": "Löydettävät sanat: queremos = haluamme; vamos = menemme; pronto = pian. Sanat kulkevat käärmeen suuntaisesti, myös rivin mutkan yli."
+    },
+    {
+      "type": "gap",
+      "prompt": "Täydennä virkkeen aukot espanjaksi.",
+      "sentence": "Nosotros ___ ir al parque, pero ellos ___ a casa.",
+      "gaps": [
+        {
+          "answers": [
+            "queremos"
+          ],
+          "clue": "haluamme"
+        },
+        {
+          "answers": [
+            "van"
+          ],
+          "clue": "menevät"
+        }
+      ],
+      "skill": "verbit",
+      "language": "es",
+      "answers": [
+        "Nosotros queremos ir al parque, pero ellos van a casa."
+      ],
+      "explanation": "Kokonainen virke: Nosotros queremos ir al parque, pero ellos van a casa.",
+      "id": "kpop-finaali-20",
+      "section": 3
+    },
+    {
+      "type": "gap",
+      "prompt": "Täydennä virkkeen aukot espanjaksi.",
+      "sentence": "Vosotros ___ un helado y nosotros ___ al parque.",
+      "gaps": [
+        {
+          "answers": [
+            "queréis"
+          ],
+          "clue": "haluatte"
+        },
+        {
+          "answers": [
+            "vamos"
+          ],
+          "clue": "menemme"
+        }
+      ],
+      "skill": "verbit",
+      "language": "es",
+      "answers": [
+        "Vosotros queréis un helado y nosotros vamos al parque."
+      ],
+      "explanation": "Kokonainen virke: Vosotros queréis un helado y nosotros vamos al parque.",
+      "id": "kpop-finaali-21",
+      "section": 3
+    },
+    {
+      "type": "translate",
+      "prompt": "Käännä koko virke espanjaksi.",
+      "source": "Haluan matkustaa.",
+      "sourceLanguage": "fi",
+      "language": "es",
+      "answers": [
+        "Quiero viajar",
+        "Yo quiero viajar"
+      ],
+      "skill": "querer",
+      "explanation": "Quiero = haluan. Sen jälkeen toinen verbi on perusmuodossa viajar (matkustaa).",
+      "id": "kpop-finaali-22",
+      "section": 3
+    },
+    {
+      "type": "translate",
+      "prompt": "Käännä koko virke suomeksi.",
+      "source": "Tenemos una sorpresa para ti.",
+      "sourceLanguage": "es",
+      "language": "fi",
+      "answers": [
+        "Meillä on sinulle yllätys",
+        "Meillä on yllätys sinulle"
+      ],
+      "skill": "sanasto",
+      "explanation": "Tenemos = meillä on, una sorpresa = yllätys ja para ti = sinulle.",
+      "id": "kpop-finaali-23",
+      "section": 3
     }
   ]
 };

@@ -13,6 +13,13 @@ function drag(chip,drop){let start=null,moved=false;
 }
 function create(q,field){
  if(q.type==='wordhunt')return WordHunt.create(q,field);
+ if(q.type==='gap'){
+  const help=node('p','Kirjoita puuttuvat sanat suoraan virkkeen aukkoihin. Täytä kaikki aukot; älä kirjoita koko virkettä uudelleen.','interaction-help');help.id=q.id+'-help';
+  const line=node('div',null,'gap-sentence');line.lang=q.language||'es';const inputs=[];
+  q.sentence.split('___').forEach((part,i)=>{line.append(node('span',part));if(i>=q.gaps.length)return;const label=node('label',null,'gap-inline'),hint=node('span','Aukko '+(i+1)+(q.gaps[i].clue?' · '+q.gaps[i].clue:''),'gap-hint');hint.lang='fi';
+   const input=node('input');input.type='text';input.id=q.id+'-gap-'+i;input.name=input.id;input.autocomplete='off';input.spellcheck=false;input.maxLength=80;input.setAttribute('aria-describedby',help.id+' '+q.id+'-feedback');label.append(hint,input);line.append(label);inputs.push(input);
+  });field.append(help,line);return {answer:()=>inputs.map(input=>input.value),reset:()=>inputs.forEach(input=>input.value='')};
+ }
  const help=node('p',null,'interaction-help');help.id=q.id+'-help';field.append(help);
  const details=node('details',null,'interaction-details');details.append(node('summary','Näppäimistö ja korjaaminen'));const instructions=node('p');details.append(instructions);
  const live=node('p',null,'quiet interaction-status');live.setAttribute('role','status');live.setAttribute('aria-live','polite');

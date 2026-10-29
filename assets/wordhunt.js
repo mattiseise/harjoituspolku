@@ -34,7 +34,10 @@ function create(q,field){
  snake.addEventListener('pointerup',e=>{if(!press)return;const i=at(document.elementFromPoint(e.clientX,e.clientY)),start=press.index;press=null;if(moved){if(i!==null)finish(start,i);else{clearSelection();live.textContent='Valinta peruttu. Päästä irti sanan viimeisen kirjaimen kohdalla.';}}else{choose(start);moved=true;}});
  snake.addEventListener('pointercancel',()=>{press=null;moved=false;clearSelection();live.textContent='Valinta peruttu.';});
  snake.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopImmediatePropagation();moved=false;}},true);
- field.append(help,targets,snake,details,live);render();return {answer:()=>q.words.filter(w=>found.has(w)),reset:()=>{found.clear();ranges.length=0;press=null;moved=false;focusIndex=0;live.textContent='';clearSelection();}};
+ const creature=make('div',null,'snake-creature'+(Math.ceil(chars.length/5)%2===0?' snake-end-left':''));const face=make('div',null,'snake-face');face.setAttribute('aria-hidden','true');face.append(make('span',null,'snake-eye'),make('span',null,'snake-eye'),make('span',null,'snake-tongue'));const tail=make('div',null,'snake-tail');tail.setAttribute('aria-hidden','true');creature.append(face,snake,tail);
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)'),motion=make('button',null,'textbutton snake-motion');motion.type='button';let moving=!reduced.matches;
+ function setMotion(value){moving=value&&!reduced.matches;motion.disabled=reduced.matches;creature.classList.toggle('snake-still',!moving);motion.textContent=reduced.matches?'Käärmeen liike pois (selaimen asetus)':moving?'Pysäytä käärmeen liike':'Käynnistä käärmeen liike';motion.setAttribute('aria-pressed',String(moving));}motion.addEventListener('click',()=>setMotion(!moving));reduced.addEventListener('change',e=>{setMotion(e.matches?false:moving);});setMotion(moving);
+ field.append(help,targets,creature,motion,details,live);render();return {answer:()=>q.words.filter(w=>found.has(w)),reset:()=>{found.clear();ranges.length=0;press=null;moved=false;focusIndex=0;live.textContent='';clearSelection();}};
 }
 root.WordHunt={create};
 })(window);
