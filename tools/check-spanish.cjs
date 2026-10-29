@@ -6,7 +6,7 @@ const load=slug=>{const s={window:{}};vm.runInNewContext(fs.readFileSync(`sisalt
 // Build an actual permutation of the supplied tokens, retaining punctuation and
 // duplicate word identities, rather than bypassing the interaction with a string.
 function ordered(q,text){const pool=q.tokens.slice();return text.split(' ').map(word=>{const i=pool.findIndex(t=>G.normalize(t)===G.normalize(word));assert(i>=0,`${q.id}: missing token ${word}`);return pool.splice(i,1)[0];});}
-for(const slug of slugs){const quiz=load(slug);assert.equal(quiz.questions.length,slug==='kpop-finaali'?23:20);
+for(const slug of slugs){const quiz=load(slug);assert.equal(quiz.questions.length,slug==='kpop-finaali'?26:20);
  assert.equal(quiz.questions.filter(q=>q.type==='gap').length,2);assert.equal(quiz.questions.filter(q=>q.type==='translate').length,2);
  const rows=[];
  for(const q of quiz.questions){let answer=q.answers[0];

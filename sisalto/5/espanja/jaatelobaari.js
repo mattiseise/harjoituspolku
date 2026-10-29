@@ -29,6 +29,10 @@ window.QUIZ = {
     "sanasto": {
       "title": "Kappaleiden sanasto",
       "reviewTip": "Tee omat sanakortit: una sorpresa, pronto, viajar, una aventura, además, donde, sin ja perdón. Keksi kahdesta sanasta oma lause."
+    },
+    "tilaus": {
+      "title": "Tilaus: querer ja jäätelömaku",
+      "reviewTip": "Harjoittele molemmat osat: yo quiero = minä haluan ja vainilla = vanilja. Kirjoita Yo quiero un helado de vainilla. Vaihda lopuksi jäätelömakua."
     }
   },
   "sections": [
@@ -183,7 +187,7 @@ window.QUIZ = {
       "answers": [
         "¿Te gusta el helado de chocolate?"
       ],
-      "explanation": "Te gusta = pidätkö. Kysymys kirjoitetaan ¿- ja ?-merkkien väliin.",
+      "explanation": "¿Te gusta el helado de chocolate? = Pidätkö suklaajäätelöstä? Kysymys kirjoitetaan ¿- ja ?-merkkien väliin.",
       "language": "es",
       "type": "order",
       "tokens": [
@@ -255,7 +259,8 @@ window.QUIZ = {
       "skill": "maut",
       "prompt": "Kirjoita sitruuna espanjaksi (pelkkä maku).",
       "answers": [
-        "limón"
+        "limón",
+        "el limón"
       ],
       "explanation": "Sitruuna = limón. Muista ó.",
       "language": "es",
@@ -266,7 +271,8 @@ window.QUIZ = {
       "skill": "maut",
       "prompt": "Kirjoita vesimeloni espanjaksi.",
       "answers": [
-        "sandía"
+        "sandía",
+        "la sandía"
       ],
       "explanation": "Vesimeloni = sandía, meloni = melón. Ne ovat eri sanoja.",
       "language": "es",
@@ -275,11 +281,14 @@ window.QUIZ = {
     },
     {
       "skill": "maut",
-      "prompt": "Kirjoita persikka espanjaksi (kirjan sana).",
+      "prompt": "Kirjoita persikka espanjaksi.",
       "answers": [
-        "melocotón"
+        "melocotón",
+        "el melocotón",
+        "durazno",
+        "el durazno"
       ],
-      "explanation": "Kirjan sana on melocotón. Muista viimeisen tavun aksentti.",
+      "explanation": "Kuvasanaston pääsana on melocotón. Muista viimeisen tavun aksentti. Myös kirjan puhekuplan alueellinen sana durazno tarkoittaa persikkaa ja hyväksytään.",
       "language": "es",
       "id": "jaatelobaari-12",
       "section": 2
@@ -312,7 +321,9 @@ window.QUIZ = {
       "prompt": "Vastaa kysymykseen ¿Quieres un helado? sanomalla ”En, en halua.”",
       "answers": [
         "No, no quiero",
-        "No no quiero"
+        "No no quiero",
+        "No, yo no quiero",
+        "No yo no quiero"
       ],
       "explanation": "Ensimmäinen no vastaa kysymykseen, toinen kieltää verbin: No, no quiero.",
       "language": "es",
@@ -360,7 +371,7 @@ window.QUIZ = {
           "clue": "vanilja"
         }
       ],
-      "skill": "querer",
+      "skill": "tilaus",
       "language": "es",
       "answers": [
         "Yo quiero un helado de vainilla."
@@ -416,7 +427,9 @@ window.QUIZ = {
         "En halua suklaajäätelöä",
         "Minä en halua suklaajäätelöä",
         "En halua suklaan makuista jäätelöä",
-        "Minä en halua suklaan makuista jäätelöä"
+        "Minä en halua suklaan makuista jäätelöä",
+        "En halua suklaanmakuista jäätelöä",
+        "Minä en halua suklaanmakuista jäätelöä"
       ],
       "skill": "puhe",
       "explanation": "No quiero = en halua. Un helado de chocolate = suklaajäätelö.",

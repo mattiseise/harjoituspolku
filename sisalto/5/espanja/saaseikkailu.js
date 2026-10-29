@@ -239,9 +239,10 @@ window.QUIZ = {
       "skill": "saa",
       "prompt": "Kerro: ”On kylmä ja sataa lunta.”",
       "answers": [
-        "Hace frío y nieva"
+        "Hace frío y nieva",
+        "Nieva y hace frío"
       ],
-      "explanation": "Hace frío y nieva. Sanoja yhdistää y = ja.",
+      "explanation": "Hace frío = on kylmä, nieva = sataa lunta ja y = ja. Myös sääilmausten päinvastainen järjestys hyväksytään: Nieva y hace frío.",
       "language": "es",
       "type": "order",
       "tokens": [
@@ -389,10 +390,12 @@ window.QUIZ = {
       "language": "es",
       "answers": [
         "Hace frío y nieva",
-        "Nieva y hace frío"
+        "Nieva y hace frío",
+        "Hace frío y está nevando",
+        "Está nevando y hace frío"
       ],
       "skill": "saa",
-      "explanation": "Hace frío = on kylmä, nieva = sataa lunta ja y = ja. Myös sääilmausten päinvastainen järjestys hyväksytään.",
+      "explanation": "Hace frío = on kylmä, nieva = sataa lunta ja y = ja. Myös ilmausten päinvastainen järjestys sekä está nevando (sataa parhaillaan lunta) hyväksytään.",
       "id": "saaseikkailu-19",
       "section": 3
     },

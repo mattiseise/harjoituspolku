@@ -98,7 +98,7 @@ Oletuksena sessionStorage säilyttää kokoelman saman välilehden sivusiirtymis
 
 - `sisalto/5/espanja/jaatelobaari.html`: 20 tehtävää, kaikki 12 jäätelömakua ja tilaaminen.
 - `sisalto/5/espanja/saaseikkailu.html`: 20 tehtävää, vuodenajat ja sää.
-- `sisalto/5/espanja/kpop-finaali.html`: 23 tehtävää, querer- ja ir-verbien kaikki persoonat, sanasto ja kertaus.
+- `sisalto/5/espanja/kpop-finaali.html`: 26 tehtävää, querer- ja ir-verbien kaikki persoonat, sanasto ja kertaus.
 - Vanha `pohja.html` toimii valintasivuna myös aiemmista kirjanmerkeistä.
 
 Sisältö on laadittu käyttäjän lähettämien yhdeksän oppikirjakuvan perusteella. Kuvissa näkyvät sivut 186–189, 192–195, 202–207 ja 210 (yksi aukeama kahdesti). Alueen otsikkona käytetään sivuja 186–210, mutta kaikkia väliin jääviä sivuja ei ollut kuvissa. Tehtävien tilanteet ovat uusia; oppikirjakuvia, kuvituksia tai kokonaisia tekstejä ei julkaista. Lähdesisällöt: 12 makua, tilaaminen, pallot ja koot, querer, vuodenajat ja sää sekä kappaleen 12 sanasto ja ir. Espanjan aksentit ja ñ tarkistetaan täsmällisesti. Isot kirjaimet, NFC/NFD-esitys, alun ¿/¡ ja lopun piste/huuto-/kysymysmerkki sallitaan.
@@ -119,7 +119,7 @@ Kokoelma käyttää muuttamatonta `assets/rewards.js`:ää ja aiempaa yhteistä 
 
 ### Tarkistukset
 
-Aja aiempien tarkistusten lisäksi `node tools/check-spanish.cjs`. Se tarkistaa kaikki 63 tehtävää, palikoiden vastaavuuden, keskeneräiset ja väärät yhdistelmät, aksentit, verbien kuusi persoonaa, 12 makua ja kertauspalautteen. Windowsissa aiemmat sisennetyn skriptin/CSP:n ja offline-kopioiden tarkistukset normalisoivat CRLF-rivinvaihdot LF:ksi kuten HTML-jäsennin.
+Aja aiempien tarkistusten lisäksi `node tools/check-spanish.cjs`. Se tarkistaa kaikki 66 tehtävää, palikoiden vastaavuuden, keskeneräiset ja väärät yhdistelmät, aksentit, verbien kuusi persoonaa, 12 makua ja kertauspalautteen. Windowsissa aiemmat sisennetyn skriptin/CSP:n ja offline-kopioiden tarkistukset normalisoivat CRLF-rivinvaihdot LF:ksi kuten HTML-jäsennin.
 
 Selaimessa tarkistettu 320 ja 390 pikselin mobiilinäkymät: kaikki kolme koetta kokonaisilla oikeilla vastauksilla (16/16, 16/16 ja 19/19), aksentti- ja verbivirheiden palaute, keskeneräiset tehtävät, näppäimistö, parin ja lausepalikan raahaus, poistaminen, järjestyksen korjaaminen, nollaus sekä yhteisen buusterin avaaminen ja yhden kortin siirtyminen toiseen espanjan harjoitukseen. Testaus on tehty työpöytäselaimen mobiilikoossa; fyysistä puhelinta ei ole käytetty.
 
@@ -137,7 +137,7 @@ Jokaisessa kolmessa espanjan harjoituksessa on yksi Sanasukka. Selaimessa on tar
 
 ### Kirjoitettavat aukot, käännökset ja käärmeen liike
 
-Jokaisen espanjan harjoituksen neljännessä osiossa on kaksi `gap`- ja kaksi `translate`-tehtävää. Jäätelöbaari ja Sääseikkailu sisältävät nyt 20 tehtävää ja K-pop-finaali 23. Käännökset kulkevat molempiin suuntiin, ja hyväksyttävät vaihtoehdot määritellään tehtäväkohtaisesti (esimerkiksi persoonapronominin mukana olo, nosotros/nosotras ja luontevat suomen sanajärjestykset). Aksentteja ei ohiteta. Automaattinen tarkistus hyväksyy määritellyt vastaukset; kaikkia mahdollisia vapaita käännöksiä ei arvioida semanttisesti.
+Jokaisen espanjan harjoituksen neljännessä osiossa on kaksi `gap`- ja kaksi `translate`-tehtävää. Jäätelöbaari ja Sääseikkailu sisältävät nyt 20 tehtävää ja K-pop-finaali 26. Käännökset kulkevat molempiin suuntiin, ja hyväksyttävät vaihtoehdot määritellään tehtäväkohtaisesti (esimerkiksi persoonapronominin mukana olo, nosotros/nosotras ja luontevat suomen sanajärjestykset). Aksentteja ei ohiteta. Automaattinen tarkistus hyväksyy määritellyt vastaukset; kaikkia mahdollisia vapaita käännöksiä ei arvioida semanttisesti.
 
 - `type: 'gap'`: `sentence` sisältää `___`-merkinnän jokaista aukkoa kohden. `gaps` sisältää `answers`-taulukon ja suomenkielisen `clue`-vihjeen jokaiseen aukkoon. Aukot ovat nimettyjä kirjoituskenttiä itse virkkeessä. Vastauksena on aukkojen järjestyksessä oleva merkkijonotaulukko. Kaikki aukot tarvitaan valmistumiseen ja yhteen pisteeseen. Tarkistus hyväksyy kunkin aukon vaihtoehdot toisistaan riippumatta. Vienti ja mallivastaus näyttävät kokonaisen virkkeen.
 - `type: 'translate'`: `source`, `sourceLanguage`, vastauksen `language` ja hyväksyttävät kokonaiset `answers`. Käyttää yhteistä tekstivastauksen tarkistusta ja näyttää lähtövirkkeen erikseen oikealla kielellä. Vastauksen kieltä käytetään vastauskentän kielimerkintänä.
@@ -145,3 +145,19 @@ Jokaisen espanjan harjoituksen neljännessä osiossa on kaksi `gap`- ja kaksi `t
 Käärmeen CSS-hahmolla on kasvot, räpyttävät silmät, ajoittain näkyvä kieli ja heilahtava häntä. Kirjainkentät ja niiden maalausalueet pysyvät paikallaan. Tehtäväkohtainen painike pysäyttää/käynnistää liikkeen. `prefers-reduced-motion: reduce` estää animaatiot, piilottaa kielen ja poistaa käynnistyksen käytöstä; asetus huomioidaan myös sen vaihtuessa sivun ollessa auki. Hahmon koristeet eivät kuulu ruudunlukijan sisältöön.
 
 Uusien tehtävien tarkistus sisältää aukkojen puuttuvat, väärät ja hyväksyttävät vaihtoehdot sekä käännösten vaihtoehdot. Selaimessa on tarkistettu kaikkien 12 lisätehtävän oikeat vastaukset, keskeneräinen moniaukkotehtävä, aksenttivirhe, 320 pikselin asettelu ja käärmeen liikkeen pysäyttäminen/käynnistäminen.
+
+
+## Yhtenäinen Kieli & rytmi -tehtävänäkymä
+
+Espanjan kaikki kolme koetta käyttävät nyt äidinkielen K-pop-harjoituksista erotettua yhteistä visuaalista kieltä: samat neon-, pastelli- ja tähtiteemat, typografia, tehtäväkortit, banneri, kuvitukset ja buusteri. `assets/rhythm.css` sisältää teemat ja `assets/rhythm.js` osio-/tulosnäkymän. Kuusi `rhythm-*-{stage,desk}.svg`-tiedostoa ovat olemassa olevan esikuvan kuvituksia. Kirjaston koevärit vastaavat niiden avautuvaa teemaa.
+
+- Osioita näytetään yksi kerrallaan; olemassa olevat DOM-osiot vain piilotetaan. Sanapalikat, yhdistämiset, sanakäärme ja kirjoituskentät eivät rakennu osionvaihdossa uudelleen.
+- Eteneminen ja osioiden vastausmäärät muodostuvat kysymysdatasta. Mobiilin nimetty osionavigointi vierii vaakasuunnassa omassa rajatussa tilassaan; aktiivinen osio vieritetään näkyviin.
+- Tarkistus näyttää erillisen tulosnäkymän, osiokohtaiset pisteet, oman kertauksen, yhteisen buusterin ja kaikki vastaukset selityksineen. Vastauksia voi suodattaa ja palata suoraan oikeaan tehtävään. Keskeneräinen koe ei avaa buusteria.
+- Sivun yhteinen liikeasetus pysäyttää myös kirjainkäärmeen ja päivittää sen oman ohjaimen. Vähennetyn liikkeen asetus huomioidaan edelleen.
+- Vastauksien tyhjennys vahvistetaan sivun omassa nimetyssä dialogissa. Peruuta säilyttää vastaukset, vahvistus tyhjentää tehtävät ja aloittaa ensimmäisestä osiosta. Korttikokoelmaan ei kosketa.
+- `quiz.js` käyttää Rhythm-moduulia vain, kun se on ladattu. Aiempi suomen kielen perusteet-koe toimii edelleen ilman sitä.
+
+Sisällöt tarkastettiin erillisellä agentilla kaikkia toimitettuja kuvia vasten. Finaaliin lisättiin sanastoa, sanapainon tunnistaminen ja d-äänteen tunnistaminen. Ääntämistä tai kuullun ymmärtämistä ei arvioida tekstitehtävässä. Korjauksia tehtiin muun muassa donde/dónde-erotteluun, kirjan durazno-vaihtoehtoon, käännösvariantteihin, pilkun jälkeisen välilyönnin joustoon ja kertauspalautteen kohdentumiseen. `node tools/check-spanish-content.cjs` tarkistaa 334 riippumatonta hyväksyntä-/hylkäystapausta. Olennaiset aksentit, oikeat persoonamuodot ja merkityserot säilyvät tarkistuksessa.
+
+Uusi näkymä testattiin selaimessa tietokonekoossa sekä 320 ja 390 pikselin mobiilinäkymissä. Kokeet läpäistiin kokonaisina (20/20, 20/20, 26/26). Lisäksi tarkistettiin osionvaihdossa säilyvät osittaiset vastaukset, puuttuvien tehtävien tulos, korjauslinkit, aksenttivirheen palaute, sama buusteritunniste korjauksen jälkeen, liikeasetukset, nollauksen peruminen/vahvistus ja vanhan suomen kokeen yhteensopivuus. Fyysistä puhelinta ei käytetty.

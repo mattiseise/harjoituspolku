@@ -33,6 +33,10 @@ window.QUIZ = {
     "verbit": {
       "title": "Querer ja ir yhdessä",
       "reviewTip": "Taivuta ensin querer (haluta) ja ir (mennä) kaikissa kuudessa persoonassa. Alleviivaa virkkeen tekijät ja valitse molempiin aukkoihin tekijään sopiva muoto."
+    },
+    "aantaminen": {
+      "title": "Sanapaino ja d-äänne",
+      "reviewTip": "Tavuta melocotón: me-lo-co-tón. Painomerkki osoittaa painollisen tavun. Vertaa kirjan äänitteestä sanoja helado ja sandía: helado-sanan d ääntyy pehmeästi. Kuuntele ja toista; tekstitehtävä ei arvioi omaa ääntämistäsi."
     }
   },
   "sections": [
@@ -51,6 +55,10 @@ window.QUIZ = {
     {
       "title": "Täydennä ja käännä",
       "intro": "Kirjoita aukkoihin puuttuvat sanat. Käännä lopuksi kokonaisia virkkeitä molempiin suuntiin."
+    },
+    {
+      "title": "Sanasto ja ääntämisen tunnistaminen",
+      "intro": "Kertaa vielä kappaleen 12 sanoja. Tunnista sanapaino ja d-äänteen malli tekstistä. Nämä tehtävät eivät mittaa kuullun ymmärtämistä tai omaa ääntämistä."
     }
   ],
   "questions": [
@@ -232,9 +240,9 @@ window.QUIZ = {
       "skill": "sanasto",
       "prompt": "Kulissien takana: yhdistä lisää sanoja.",
       "answers": [
-        "lisäksi → además; missä → donde; ilman → sin; anteeksi → perdón"
+        "lisäksi → además; missä (paikkaa yhdistävä sana, ei kysymys) → donde; ilman → sin; anteeksi → perdón"
       ],
-      "explanation": "Parit: lisäksi = además; missä = donde; ilman = sin; anteeksi = perdón.",
+      "explanation": "Además = lisäksi, donde = missä, sin = ilman ja perdón = anteeksi. Kirjan donde yhdistää paikan muuhun lauseeseen: donde hay aventuras = missä on seikkailuja. Kysymyssana dónde kirjoitetaan aksentilla: ¿Dónde estás? = Missä olet?",
       "language": "es",
       "type": "match",
       "pairs": [
@@ -243,7 +251,7 @@ window.QUIZ = {
           "right": "además"
         },
         {
-          "left": "missä",
+          "left": "missä (paikkaa yhdistävä sana, ei kysymys)",
           "right": "donde"
         },
         {
@@ -431,12 +439,79 @@ window.QUIZ = {
       "language": "fi",
       "answers": [
         "Meillä on sinulle yllätys",
-        "Meillä on yllätys sinulle"
+        "Meillä on yllätys sinulle",
+        "Meillä on yllätys sinua varten",
+        "Meillä on sinua varten yllätys",
+        "Sinulle meillä on yllätys",
+        "Sinulle on meillä yllätys"
       ],
       "skill": "sanasto",
       "explanation": "Tenemos = meillä on, una sorpresa = yllätys ja para ti = sinulle.",
       "id": "kpop-finaali-23",
       "section": 3
+    },
+    {
+      "id": "kpop-finaali-24",
+      "section": 4,
+      "skill": "sanasto",
+      "type": "match",
+      "language": "es",
+      "prompt": "Vielä neljä kappaleen 12 sanaa ja ilmausta: yhdistä parit.",
+      "pairs": [
+        {
+          "left": "yhä",
+          "right": "todavía"
+        },
+        {
+          "left": "Onpa harmi!",
+          "right": "¡Qué pena!"
+        },
+        {
+          "left": "pikkukani",
+          "right": "un conejito"
+        },
+        {
+          "left": "seikkailija",
+          "right": "un aventurero"
+        }
+      ],
+      "answers": [
+        "yhä → todavía; Onpa harmi! → ¡Qué pena!; pikkukani → un conejito; seikkailija → un aventurero"
+      ],
+      "explanation": "Todavía = yhä, ¡Qué pena! = Onpa harmi!, un conejito = pikkukani ja un aventurero = seikkailija. Aventura tarkoittaa seikkailua; aventurero on seikkailija."
+    },
+    {
+      "id": "kpop-finaali-25",
+      "section": 4,
+      "skill": "aantaminen",
+      "language": "es",
+      "prompt": "Missä tavussa sanan melocotón (me-lo-co-tón) paino on?",
+      "options": [
+        "me",
+        "lo",
+        "co",
+        "tón"
+      ],
+      "answers": [
+        "tón"
+      ],
+      "explanation": "Melocotón-sanan paino on viimeisellä tavulla tón. Painomerkki ó:n päällä näyttää painollisen tavun."
+    },
+    {
+      "id": "kpop-finaali-26",
+      "section": 4,
+      "skill": "aantaminen",
+      "language": "es",
+      "prompt": "Missä näistä sanoista d ääntyy kirjan mallin mukaan pehmeästi?",
+      "options": [
+        "sandía",
+        "helado",
+        "Daniela"
+      ],
+      "answers": [
+        "helado"
+      ],
+      "explanation": "Helado-sanassa d on vokaalien välissä ja ääntyy pehmeästi. Sandía-sanassa d on n:n jälkeen. Daniela alkaa d:llä; kirjan mallissa nämä kaksi d-äännettä ovat suomen d:n kaltaisia. Harjoittele ääneen myös kirjan äänitteen avulla."
     }
   ]
 };
