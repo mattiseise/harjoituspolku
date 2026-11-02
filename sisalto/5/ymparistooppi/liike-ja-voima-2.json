@@ -1,0 +1,591 @@
+{
+  "id": "ymparistooppi-liike-2",
+  "title": "Remix: vertaile ja korjaa",
+  "grade": 5,
+  "subject": "Ympäristöoppi",
+  "subjectSlug": "ymparistooppi",
+  "slug": "liike-ja-voima-2",
+  "theme": "pastel",
+  "language": "fi",
+  "status": "ready",
+  "description": "Tutki vertailuja, korjaa mittareita ja kokoa virkkeitä. Kuusi lyhyttä osiota Remix-hengessä.",
+  "minutes": "20–27",
+  "tags": [
+    "Liike",
+    "Voima",
+    "Kitka",
+    "Ilmanvastus",
+    "Pyörät",
+    "Tasapaino",
+    "K-pop"
+  ],
+  "sourceNote": "Harjoitus perustuu koealueeseen: luvut 5–10, sivut 18–29. Mukana ovat liikkeen, voiman, kitkan, ilman aiheuttamien voimien, pyörien ja tasapainon ydinkäsitteet. Raketti- ja suihkumoottorien sivuaihe ei kuulu näihin tehtäviin.",
+  "writingNote": "Kun tehtävässä pyydetään kirjoittamaan, kirjoita vain lukuarvo tai yksikkötunnus. Selityksiä ei tarvitse kirjoittaa. Voit pitää tauon osioiden välissä.",
+  "skills": {
+    "liiketilat": {
+      "title": "Liikkeen lajit",
+      "reviewTip": "Vertaa nopeutta eri hetkillä. Kun nopeus pysyy samana, liike on tasaista. Kun nopeus kasvaa, liike on kiihtyvää. Kun nopeus pienenee, liike on hidastuvaa."
+    },
+    "matka-aika": {
+      "title": "Matkan ja ajan vertailu",
+      "reviewTip": "Samalla matkalla lyhyempi aika tarkoittaa suurempaa keskinopeutta. Samassa ajassa nopeampi kulkee pidemmän matkan. Jos sekä matka että aika muuttuvat, jaa matka ajalla."
+    },
+    "nopeus": {
+      "title": "Nopeuden laskeminen",
+      "reviewTip": "Jaa kuljettu matka siihen käytetyllä ajalla. Kun matka on metrejä ja aika sekunteja, nopeuden yksikkö on m/s."
+    },
+    "yksikot": {
+      "title": "Matkan, ajan ja nopeuden yksiköt",
+      "reviewTip": "Metri (m) mittaa matkaa ja sekunti (s) aikaa. Nopeutta mitataan esimerkiksi metreinä sekunnissa (m/s) tai kilometreinä tunnissa (km/h)."
+    },
+    "vaikutus": {
+      "title": "Voima muuttaa liikettä",
+      "reviewTip": "Voima voi saada esineen liikkeelle, muuttaa nopeutta, pysäyttää tai kääntää liikkeen suuntaa. Myös suunnan muuttamiseen tarvitaan voimaa."
+    },
+    "kosketus-eta": {
+      "title": "Kosketusvoima ja etävoima",
+      "reviewTip": "Kosketusvoima syntyy pintojen kosketuksessa. Painovoima ja magneettinen voima voivat vaikuttaa ilman esineiden keskinäistä kosketusta."
+    },
+    "painovoima": {
+      "title": "Painovoima",
+      "reviewTip": "Maa vetää esineitä kohti keskipistettään. Tämä painovoima vaikuttaa kaikkialla Maan pinnalla ja aiheuttaa esineen putoamisen."
+    },
+    "massa-voima": {
+      "title": "Massa ja voima",
+      "reviewTip": "Massa mitataan kilogrammoina (kg), voima newtoneina (N). Kun muut tekijät ovat samat, suurempimassaisen esineen nopeuden muuttaminen yhtä paljon samassa ajassa vaatii suuremman voiman."
+    },
+    "kitkan-tekijat": {
+      "title": "Kitkaan vaikuttavat tekijät",
+      "reviewTip": "Kitka riippuu koskettavista pinnoista ja massasta. Vertaa vain yhtä muutosta kerrallaan: esimerkiksi sama laatikko eri pinnoilla tai sama pinta eri kuormilla."
+    },
+    "kitkan-hyoty": {
+      "title": "Kitkan hyöty",
+      "reviewTip": "Kengän ja maan kitka estää jalkaa luistamasta. Jarruissa kitka hidastaa liikettä. Kitka voi siis sekä auttaa liikkeelle että pysäyttää."
+    },
+    "kitkan-vahentaminen": {
+      "title": "Kitkan vähentäminen",
+      "reviewTip": "Voitelu ja sopivien pintojen tasoittaminen vähentävät kitkaa. Älä kuitenkaan vähennä kitkaa kohdasta, jossa tarvitaan pitoa, kuten jarruista."
+    },
+    "jatkuvuus": {
+      "title": "Liikkeen jatkuvuus",
+      "reviewTip": "Liikkuva esine pyrkii jatkamaan suoraan entisellä nopeudellaan. Hidastuminen tai suunnan muutos vaatii voimaa; äkkijarrutuksessa matkustaja pyrkii jatkamaan eteenpäin."
+    },
+    "ilmanvastuksen-tekijat": {
+      "title": "Ilmanvastuksen tekijät",
+      "reviewTip": "Ilmanvastus kasvaa yleensä nopeuden ja ilmaa kohtaavan pinta-alan kasvaessa. Tutki vain yhtä muutosta kerrallaan ja pidä muut tekijät samoina."
+    },
+    "muoto": {
+      "title": "Muoto ja ilmanvastus",
+      "reviewTip": "Virtaviivainen, pisaramainen muoto vähentää ilmanvastusta. Kun vertaat muotoja, pidä nopeus ja etupinnan pinta-ala samoina. Etupinta tarkoittaa sitä pintaa, jonka näet katsoessasi esinettä suoraan edestä sen kulkusuuntaa vastaan: se kohtaa ilman."
+    },
+    "laskuvarjo": {
+      "title": "Laskuvarjon vaikutus",
+      "reviewTip": "Avautunut suuri laskuvarjo kohtaa paljon ilmaa. Ilmanvastus kasvaa ja hidastaa putoamista; painovoima ei katoa."
+    },
+    "nostava-voima": {
+      "title": "Siiven nostava voima",
+      "reviewTip": "Liikkuvan ilman ja siiven vuorovaikutus voi synnyttää ylöspäin nostavan voiman. Erota se painovoimasta ja liikettä vastustavasta ilmanvastuksesta."
+    },
+    "vieriminen": {
+      "title": "Vierimisen hyöty",
+      "reviewTip": "Pyörät ja rullat korvaavat liukumista vierimisellä. Kuorman siirtäminen helpottuu, koska liikkumista vastustava kitka on yleensä pienempi."
+    },
+    "vaki-pyora": {
+      "title": "Kiinteä väkipyörä",
+      "reviewTip": "Lipputangon kiinteä väkipyörä muuttaa vetovoiman suuntaa: narusta alas vetäminen nostaa lippua. Pelkkä kiinteä pyörä ei automaattisesti pienennä tarvittavaa voimaa."
+    },
+    "hammas-suunta": {
+      "title": "Hammaspyörien suunnat",
+      "reviewTip": "Suoraan koskettavat hammaspyörät pyörivät vastakkaisiin suuntiin. Seuraa kosketuksia yksi kerrallaan; ketjuvälitys ei ole sama tilanne."
+    },
+    "hammas-nopeus": {
+      "title": "Hammaspyörien nopeudet",
+      "reviewTip": "Suoraan koskettavista hammaspyöristä pienempi tekee enemmän kierroksia samassa ajassa. Nimeä vetävä pyörä ennen kuin ennustat muutoksen."
+    },
+    "painopiste": {
+      "title": "Painopisteen korkeus",
+      "reviewTip": "Matala painopiste parantaa vakautta, kun tukipinta ja muut ominaisuudet pidetään samoina. Kuorman siirtäminen alas laskee kokonaisuuden painopistettä."
+    },
+    "tukipinta": {
+      "title": "Tukipinta",
+      "reviewTip": "Tukipinta on alustaa koskettavien tukikohtien väliin jäävä alue. Leveämpi tukipinta parantaa vakautta, kun muut tekijät ovat samat."
+    },
+    "painopiste-tuen-ylla": {
+      "title": "Painopiste suhteessa tukeen",
+      "reviewTip": "Kuvittele painopisteestä suoraan alas kulkeva viiva. Esine alkaa kaatua, jos viiva menee tukipinnan ulkopuolelle eikä mikään muu tue esinettä."
+    },
+    "keinu": {
+      "title": "Keinulaudan tasapaino",
+      "reviewTip": "Raskaampi keinulautailija tasapainottaa kevyemmän istumalla lähempänä tukea. Jos raskaamman puoli painuu alas, hänen siirtymisensä kohti tukea auttaa tasapainottamaan."
+    }
+  },
+  "sections": [
+    {
+      "title": "5. Liikettä on kaikkialla",
+      "intro": "Tunnista liike ja selvitä mittaustulos. Tee neljä tehtävää. Sen jälkeen voit pitää tauon."
+    },
+    {
+      "title": "6. Voima saa aikaan liikkeen",
+      "intro": "Tutki, mikä muuttaa liikettä. Tee neljä tehtävää. Sen jälkeen voit pitää tauon."
+    },
+    {
+      "title": "7. Kitka pysäyttää ja saa aikaan liikkeen",
+      "intro": "Etsi kitkan hyödyt ja haitat. Tee neljä tehtävää. Sen jälkeen voit pitää tauon."
+    },
+    {
+      "title": "8. Ilmasta aiheutuvia voimia",
+      "intro": "Ennusta liikkuvan ilman vaikutuksia. Tee neljä tehtävää. Sen jälkeen voit pitää tauon."
+    },
+    {
+      "title": "9. Pyörä helpottaa liikkumista ja nostamista",
+      "intro": "Tutki vierimistä ja sitä, miten pyörät välittävät liikettä. Tee neljä tehtävää. Sen jälkeen voit pitää tauon."
+    },
+    {
+      "title": "10. Paikallaan oleva esine on tasapainossa",
+      "intro": "Selvitä, miksi teline pysyy pystyssä. Tee neljä tehtävää. Sen jälkeen voit pitää tauon."
+    }
+  ],
+  "questions": [
+    {
+      "id": "ymp-2-01-1",
+      "section": 0,
+      "skill": "liiketilat",
+      "type": "order",
+      "prompt": "Kokoa sääntö. Aloita sanalla Nopeuden ja lopeta sanaan kiihtyvää.",
+      "tokens": [
+        "on",
+        "kiihtyvää",
+        "kasvaessa",
+        "Nopeuden",
+        "liike"
+      ],
+      "answers": [
+        "Nopeuden kasvaessa liike on kiihtyvää",
+        "Nopeuden kasvaessa on liike kiihtyvää"
+      ],
+      "explanation": "Kiihtyvässä liikkeessä nopeus kasvaa. Tasaisessa liikkeessä nopeus pysyy samana ja hidastuvassa se pienenee."
+    },
+    {
+      "id": "ymp-2-01-2",
+      "section": 0,
+      "skill": "matka-aika",
+      "type": "choice",
+      "prompt": "Harjoitusrobotit liikkuvat kumpikin 4 s. A kulkee 8 m ja B 12 m. Kumman keskinopeus on suurempi?",
+      "options": [
+        "B:n",
+        "A:n",
+        "Molempien sama"
+      ],
+      "answers": [
+        "B:n"
+      ],
+      "explanation": "Aikaa kuluu yhtä paljon, mutta B etenee pidemmälle. Sen keskinopeus on siksi suurempi: B kulkee keskimäärin 3 m/s ja A 2 m/s."
+    },
+    {
+      "id": "ymp-2-01-3",
+      "section": 0,
+      "skill": "nopeus",
+      "type": "gap",
+      "prompt": "Laske keskinopeus. Kirjoita aukkoon vain lukuarvo.",
+      "sentence": "Robotti kulkee 24 m ajassa 6 s. Keskinopeus on ___ m/s.",
+      "gaps": [
+        {
+          "clue": "24 jaettuna kuudella",
+          "answers": [
+            "4",
+            "neljä",
+            "4,0",
+            "4.0"
+          ]
+        }
+      ],
+      "answers": [
+        "Robotti kulkee 24 m ajassa 6 s. Keskinopeus on 4 m/s."
+      ],
+      "explanation": "Nopeus on matka jaettuna ajalla: 24 m : 6 s = 4 m/s. Lukujen kertominen ei kerro, kuinka monta metriä edetään sekunnissa."
+    },
+    {
+      "id": "ymp-2-01-4",
+      "section": 0,
+      "skill": "yksikot",
+      "type": "match",
+      "prompt": "Mittarikorjaamo: yhdistä mittaus oikeaan merkintään.",
+      "pairs": [
+        {
+          "left": "Käytävän pituus on 20",
+          "right": "m"
+        },
+        {
+          "left": "Kierros kestää 10",
+          "right": "s"
+        },
+        {
+          "left": "Bussin nopeus on 40",
+          "right": "km/h"
+        }
+      ],
+      "answers": [
+        "Käytävän pituus on 20 → m; Kierros kestää 10 → s; Bussin nopeus on 40 → km/h"
+      ],
+      "explanation": "Pituuteen kuuluu metri ja kestoon sekunti. Bussin nopeus voidaan ilmoittaa kilometreinä tunnissa (km/h); myös m/s mittaa nopeutta."
+    },
+    {
+      "id": "ymp-2-02-1",
+      "section": 1,
+      "skill": "vaikutus",
+      "type": "match",
+      "prompt": "Yhdistä voiman aiheuttama tapahtuma liikkeen muutokseen.",
+      "pairs": [
+        {
+          "left": "Käsi ottaa pallon kiinni",
+          "right": "Pysähtyminen"
+        },
+        {
+          "left": "Potku saa paikallaan olevan pallon liikkeelle",
+          "right": "Liikkeelle lähtö"
+        },
+        {
+          "left": "Maila kääntää lentävän pallon",
+          "right": "Suunnan muutos"
+        }
+      ],
+      "answers": [
+        "Käsi ottaa pallon kiinni → Pysähtyminen; Potku saa paikallaan olevan pallon liikkeelle → Liikkeelle lähtö; Maila kääntää lentävän pallon → Suunnan muutos"
+      ],
+      "explanation": "Voima voi pysäyttää liikkuvan pallon, saada paikallaan olevan liikkeelle tai kääntää sen suunnan. Liikkeen muutos ei tarkoita vain nopeutumista."
+    },
+    {
+      "id": "ymp-2-02-2",
+      "section": 1,
+      "skill": "kosketus-eta",
+      "type": "choice",
+      "prompt": "Väitekorjaamo: ”Magneetti vetää vain koskettaessaan.” Mikä korjaa väitteen?",
+      "options": [
+        "Magneetti ei kohdista voimaa",
+        "Magneetti voi vetää raon yli",
+        "Veto on aina kosketusvoima"
+      ],
+      "answers": [
+        "Magneetti voi vetää raon yli"
+      ],
+      "explanation": "Magneettinen voima on etävoima: magneetti voi vetää naulaa myös pienen raon yli. Esineiden ei tarvitse koskettaa toisiaan kuten käden työntäessä laatikkoa."
+    },
+    {
+      "id": "ymp-2-02-3",
+      "section": 1,
+      "skill": "painovoima",
+      "type": "select",
+      "prompt": "Ajattele pallon pudottamista eri puolilla Maata.",
+      "options": [
+        "kohti Maan keskipistettä",
+        "samaan ilmansuuntaan",
+        "poispäin keskipisteestä"
+      ],
+      "answers": [
+        "kohti Maan keskipistettä"
+      ],
+      "explanation": "Alaspäin tarkoittaa eri puolilla Maata eri suuntaa avaruudessa, mutta aina kohti Maan keskipistettä. Painovoima ei vedä kaikkialla esimerkiksi pohjoiseen.",
+      "sentence": "Maan painovoima vetää palloa kaikkialla ___."
+    },
+    {
+      "id": "ymp-2-02-4",
+      "section": 1,
+      "skill": "massa-voima",
+      "type": "choice",
+      "prompt": "Kärryjen massat ovat 2 kg ja 6 kg. Nopeutta halutaan kasvattaa yhtä paljon samassa ajassa; muut tekijät ovat samat. Kumpi tarvitsee suuremman voiman?",
+      "options": [
+        "6 kg:n kärry, voima mitataan newtoneina (N)",
+        "2 kg:n kärry, voima mitataan newtoneina (N)",
+        "6 kg:n kärry, voima mitataan kilogrammoina (kg)"
+      ],
+      "answers": [
+        "6 kg:n kärry, voima mitataan newtoneina (N)"
+      ],
+      "explanation": "Suuremman massan nopeuden muuttaminen yhtä paljon samassa ajassa vaatii suuremman voiman. Kärryn massa mitataan kilogrammoina, mutta työntövoima newtoneina."
+    },
+    {
+      "id": "ymp-2-03-1",
+      "section": 2,
+      "skill": "kitkan-tekijat",
+      "type": "choice",
+      "prompt": "Samaan laatikkoon lisätään kuormaa. Lattia ja liukuvat pinnat pysyvät samoina. Miten liukukitka yleensä muuttuu?",
+      "options": [
+        "Katoaa",
+        "Kasvaa",
+        "Pienenee"
+      ],
+      "answers": [
+        "Kasvaa"
+      ],
+      "explanation": "Lisäkuorma kasvattaa laatikon massaa ja sen painumista alustaa vasten. Samoilla pinnoilla liukukitka kasvaa yleensä massan kasvaessa; tässä pintaa ei muutettu."
+    },
+    {
+      "id": "ymp-2-03-2",
+      "section": 2,
+      "skill": "kitkan-hyoty",
+      "type": "match",
+      "prompt": "Yhdistä kitkan käyttö siihen sopivaan hyötyyn.",
+      "pairs": [
+        {
+          "left": "Kengänpohja ja maa",
+          "right": "Jalka ei luista askeleella"
+        },
+        {
+          "left": "Jarrupala ja jarrulevy",
+          "right": "Pyörän pyöriminen hidastuu"
+        },
+        {
+          "left": "Rengas ja tie",
+          "right": "Pyörä saa pitoa tiestä"
+        }
+      ],
+      "answers": [
+        "Kengänpohja ja maa → Jalka ei luista askeleella; Jarrupala ja jarrulevy → Pyörän pyöriminen hidastuu; Rengas ja tie → Pyörä saa pitoa tiestä"
+      ],
+      "explanation": "Kävelyssä kengän ja alustan välinen kitka estää jalkaa luistamasta. Jarrupalan ja jarrulevyn välinen kitka hidastaa pyörän pyörimistä. Renkaan ja tien välinen kitka auttaa hidastamaan koko polkupyörää. Hyvä pito tarkoittaa, ettei rengas luista tietä pitkin."
+    },
+    {
+      "id": "ymp-2-03-3",
+      "section": 2,
+      "skill": "kitkan-vahentaminen",
+      "type": "select",
+      "prompt": "Väitekorjaamo: huoltaja väittää öljyn kasvattavan kitkaa saranassa.",
+      "options": [
+        "ei muuta",
+        "vähentää",
+        "lisää"
+      ],
+      "answers": [
+        "vähentää"
+      ],
+      "explanation": "Voitelu vähentää vastakkain liikkuvien pintojen kitkaa, joten sarana liikkuu helpommin. Huoltajan väite vaikutuksen suunnasta oli väärä.",
+      "sentence": "Saranan sopiva voitelu yleensä ___ kitkaa."
+    },
+    {
+      "id": "ymp-2-03-4",
+      "section": 2,
+      "skill": "jatkuvuus",
+      "type": "order",
+      "prompt": "Kokoa jatkuvuussääntö tilanteeseen, jossa voimat eivät vaikuta. Aloita sanoilla Voimien puuttuessa ja lopeta sanaan muuttumattomana.",
+      "tokens": [
+        "jatkuu",
+        "Voimien",
+        "muuttumattomana",
+        "liike",
+        "puuttuessa"
+      ],
+      "answers": [
+        "Voimien puuttuessa liike jatkuu muuttumattomana",
+        "Voimien puuttuessa jatkuu liike muuttumattomana"
+      ],
+      "explanation": "Ilman liikkeeseen vaikuttavia voimia liikkuva esine jatkaisi suoraan samalla nopeudella. Tavallisessa arjessa kitka ja ilmanvastus muuttavat liikettä, joten esine lopulta hidastuu."
+    },
+    {
+      "id": "ymp-2-04-1",
+      "section": 3,
+      "skill": "ilmanvastuksen-tekijat",
+      "type": "choice",
+      "prompt": "Pyöräilijä nostaa vauhtiaan mutta pitää saman asennon. Ilmaolot pysyvät samoina. Mitä ilmanvastukselle yleensä käy?",
+      "options": [
+        "Ei muutu, koska asento pysyy",
+        "Pienenee, koska vauhti kasvaa",
+        "Kasvaa, koska vauhti kasvaa"
+      ],
+      "answers": [
+        "Kasvaa, koska vauhti kasvaa"
+      ],
+      "explanation": "Nopeuden kasvu lisää ilmanvastusta, vaikka ilman kohtaama pinta-ala ja muoto pysyvät samoina. Tässä muuttuu vain yksi tekijä: nopeus."
+    },
+    {
+      "id": "ymp-2-04-2",
+      "section": 3,
+      "skill": "muoto",
+      "type": "select",
+      "prompt": "Muotosuunnittelija pienentää ajoneuvon ilmanvastusta. Nopeus ja etupinnan koko eivät muutu.",
+      "options": [
+        "virtaviivaisen pisaramaisen",
+        "tylpän ja kulmikkaan",
+        "avoimen kuppimaisen"
+      ],
+      "answers": [
+        "virtaviivaisen pisaramaisen"
+      ],
+      "explanation": "Virtaviivainen muoto helpottaa ilman kulkua ajoneuvon ohi. Koska nopeus ja koko pidetään samoina, pienempi vastus liittyy muotoon.",
+      "sentence": "Hän valitsee ___ muodon."
+    },
+    {
+      "id": "ymp-2-04-3",
+      "section": 3,
+      "skill": "laskuvarjo",
+      "type": "order",
+      "prompt": "Kokoa virke. Aloita sanalla Ilmanvastus. Sijoita sanat varjon avautuessa peräkkäin virkkeen loppuun.",
+      "tokens": [
+        "putoamista",
+        "varjon",
+        "Ilmanvastus",
+        "avautuessa",
+        "hidastaa"
+      ],
+      "answers": [
+        "Ilmanvastus hidastaa putoamista varjon avautuessa",
+        "Ilmanvastus putoamista hidastaa varjon avautuessa"
+      ],
+      "explanation": "Varjon avautuessa ilmaa kohtaava pinta kasvaa. Kasvava ilmanvastus jarruttaa putoamista. Painovoima ei katoa, vaan varjo lisää sitä vastaan vaikuttavaa voimaa."
+    },
+    {
+      "id": "ymp-2-04-4",
+      "section": 3,
+      "skill": "nostava-voima",
+      "type": "choice",
+      "prompt": "Mikä erottaa siiven nostavan voiman painovoimasta?",
+      "options": [
+        "Painovoima työntää konetta ylös",
+        "Siiven ja ilman voima voi nostaa",
+        "Nostava voima syntyy ilman siipeä"
+      ],
+      "answers": [
+        "Siiven ja ilman voima voi nostaa"
+      ],
+      "explanation": "Siiven ja liikkuvan ilman vuorovaikutus voi synnyttää ylöspäin nostavan voiman. Maan painovoima puolestaan vetää konetta alaspäin. Liikettä vastustava ilmanvastus on eri vaikutus kuin nostava voima."
+    },
+    {
+      "id": "ymp-2-05-1",
+      "section": 4,
+      "skill": "vieriminen",
+      "type": "select",
+      "prompt": "Raskaan lavasteen alle asetetaan pyöriviä rullia tasaisella lattialla.",
+      "options": [
+        "painovoima lakkaa vaikuttamasta",
+        "kuorman massa katoaa",
+        "vieriminen korvaa liukumista"
+      ],
+      "answers": [
+        "vieriminen korvaa liukumista"
+      ],
+      "explanation": "Pyörivillä rullilla kuorma vierii eikä vain liu’u lattiaa pitkin. Vieriminen vastustaa liikettä yleensä vähemmän kuin liukuminen, mutta kuorman massa ei muutu.",
+      "sentence": "Siirtäminen helpottuu, koska ___."
+    },
+    {
+      "id": "ymp-2-05-2",
+      "section": 4,
+      "skill": "vaki-pyora",
+      "type": "choice",
+      "prompt": "Väitekorjaamo: ”Lipputangon yksi kiinteä väkipyörä puolittaa aina voiman.” Mikä on oikea korjaus?",
+      "options": [
+        "Se muuttaa vedon suuntaa",
+        "Se muuttaa vain massan yksikköä",
+        "Se poistaa lipun painon"
+      ],
+      "answers": [
+        "Se muuttaa vedon suuntaa"
+      ],
+      "explanation": "Kiinteä pyörä mahdollistaa alaspäin vetämisen samalla kun lippu nousee. Se ei yksin anna voiman puolittavaa välitystä; todellisessa pyörässä myös kitka voi lisätä vetovoiman tarvetta."
+    },
+    {
+      "id": "ymp-2-05-3",
+      "section": 4,
+      "skill": "hammas-suunta",
+      "type": "choice",
+      "prompt": "Hammaspyörä A koskettaa B:tä ja B koskettaa C:tä suoraan hampaillaan. A pyörii myötäpäivään. Miten C pyörii?",
+      "options": [
+        "Vastapäivään",
+        "Myötäpäivään",
+        "Ei pyöri lainkaan"
+      ],
+      "answers": [
+        "Myötäpäivään"
+      ],
+      "explanation": "A ja B pyörivät vastakkaisiin suuntiin, samoin B ja C. Suunta vaihtuu kahdesti, joten C pyörii samaan suuntaan kuin A. Pyörien välillä ei ole ketjua."
+    },
+    {
+      "id": "ymp-2-05-4",
+      "section": 4,
+      "skill": "hammas-nopeus",
+      "type": "match",
+      "prompt": "Tutki kolmea erillistä hammaspyöräparia, joissa pyörät koskettavat suoraan toisiaan. Yhdistä vetävä pyörä siihen, miten nopeasti toinen pyörä pyörii siihen verrattuna.",
+      "pairs": [
+        {
+          "left": "Suuri vetää pientä",
+          "right": "Seuraaja pyörii nopeammin"
+        },
+        {
+          "left": "Pieni vetää suurta",
+          "right": "Seuraaja pyörii hitaammin"
+        },
+        {
+          "left": "Samankokoinen vetää samankokoista",
+          "right": "Kierrosnopeus on sama"
+        }
+      ],
+      "answers": [
+        "Suuri vetää pientä → Seuraaja pyörii nopeammin; Pieni vetää suurta → Seuraaja pyörii hitaammin; Samankokoinen vetää samankokoista → Kierrosnopeus on sama"
+      ],
+      "explanation": "Pieni hammaspyörä ehtii useammalle kierrokselle kuin suuri, koska sen kehällä on vähemmän hampaita. Samankokoiset pyörät tekevät yhtä monta kierrosta samassa ajassa."
+    },
+    {
+      "id": "ymp-2-06-1",
+      "section": 5,
+      "skill": "painopiste",
+      "type": "choice",
+      "prompt": "Lavasteen raskas osa siirretään ylhäältä alas. Tukipinta ja kokonaismassa eivät muutu. Mitä vakaudelle yleensä tapahtuu?",
+      "options": [
+        "Paranee",
+        "Ei voi muuttua",
+        "Heikkenee"
+      ],
+      "answers": [
+        "Paranee"
+      ],
+      "explanation": "Painopiste laskee, kun painava osa siirretään alemmas. Lavaste kestää silloin yleensä suuremman kallistuksen ennen kaatumista, vaikka sen tukipinta pysyy ennallaan."
+    },
+    {
+      "id": "ymp-2-06-2",
+      "section": 5,
+      "skill": "tukipinta",
+      "type": "select",
+      "prompt": "Tukipinnan korjaamo: valoteline on liian kapea. Muut ominaisuudet pidetään samoina.",
+      "options": [
+        "yhteen keskelle",
+        "lähemmäs toisiaan",
+        "kauemmas toisistaan"
+      ],
+      "answers": [
+        "kauemmas toisistaan"
+      ],
+      "explanation": "Jalkojen levittäminen suurentaa niiden väliin jäävää tukipintaa. Painopisteen alta kulkeva pystysuora viiva pysyy tuen alueella suuremmassakin kallistuksessa.",
+      "sentence": "Vakaus paranee, kun jalat asetetaan ___."
+    },
+    {
+      "id": "ymp-2-06-3",
+      "section": 5,
+      "skill": "painopiste-tuen-ylla",
+      "type": "choice",
+      "prompt": "Teline kallistuu, eikä mikään muu tue sitä. Mikä havainto selittää kaatumisen alkamisen?",
+      "options": [
+        "Painopisteen korkeus on nolla",
+        "Tukipinta muuttuu näkymättömäksi",
+        "Painopisteestä suoraan alas kulkeva viiva menee tukipinnan ulkopuolelle"
+      ],
+      "answers": [
+        "Painopisteestä suoraan alas kulkeva viiva menee tukipinnan ulkopuolelle"
+      ],
+      "explanation": "Luotisuora tarkoittaa painopisteestä suoraan alaspäin kulkevaa viivaa. Kun se ohittaa tukipinnan reunan, painopiste ei ole enää tuen yläpuolella ja teline alkaa kaatua."
+    },
+    {
+      "id": "ymp-2-06-4",
+      "section": 5,
+      "skill": "keinu",
+      "type": "choice",
+      "prompt": "Lapset istuvat yhtä kaukana keinulaudan tuesta. Raskaamman puoli on alhaalla. Mikä muutos auttaa kohti tasapainoa?",
+      "options": [
+        "Kevyempi siirtyy kohti tukea",
+        "Raskaampi siirtyy kauemmas tuesta",
+        "Raskaampi siirtyy kohti tukea"
+      ],
+      "answers": [
+        "Raskaampi siirtyy kohti tukea"
+      ],
+      "explanation": "Raskaamman siirtyminen kohti tukea pienentää hänen kääntävää vaikutustaan. Näin hänen puolensa ei paina lautaa yhtä voimakkaasti alas. Sopiva kohta löytyy siirtymällä vähitellen."
+    }
+  ]
+}
